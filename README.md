@@ -1,3 +1,3 @@
 # Ruby-Scripts
 
-![alt tag](http://imgur.com/a/Ovnpz)
+![Screenshot](http://imgur.com/a/Ovnpz)
