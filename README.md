@@ -1,5 +1,10 @@
 # Ruby-Scripts
 
+## Gems
+
+* [Rest-Client](https://rubygems.org/gems/rest-client)
+* [Twilio-Ruby](https://rubygems.org/gems/twilio-ruby)
+
 ## IP List - Returns network information
 ![Screenshot](http://i.imgur.com/TNVpLNr.png)
 
