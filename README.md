@@ -1,7 +1,8 @@
 # Ruby-Scripts
 
-### IP List
+## IP List - Returns network information
 ![Screenshot](http://i.imgur.com/TNVpLNr.png)
 
-### IP List
+---
+## IP Location - Returns info about current WAN IP
 ![Screenshot](http://i.imgur.com/C7YdZaF.png)
