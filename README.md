@@ -1,3 +1,3 @@
 # Ruby-Scripts
 
-<img src="http://imgur.com/TNVpLNr">
+[Imgur](http://i.imgur.com/TNVpLNr.png)
