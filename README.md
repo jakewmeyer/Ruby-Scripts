@@ -1,3 +1,3 @@
 # Ruby-Scripts
 
-![Screenshot](http://imgur.com/a/Ovnpz)
+![Screenshot](http://imgur.com/TNVpLNr)
