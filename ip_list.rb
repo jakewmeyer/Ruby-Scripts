@@ -6,13 +6,13 @@ require 'Rest-Client'
 require 'Socket'
 
 url = "https://api.ipify.org"
-response = 12.345.678.91
+response = RestClient.get(url)
 
 ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
-lan = 10.0.0.23
+lan = ip.ip_address
 
-dns = 8.8.8.8
-router = 10.0.0.1
+dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
+router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
 
 puts "WAN: #{response}"
 puts "LAN: #{lan}"
