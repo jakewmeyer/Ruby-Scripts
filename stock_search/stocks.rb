@@ -6,11 +6,18 @@ require 'json'
 
 def stock_search
     # Cptures user inputs
-    print "Ticker => "
-    symbol = gets.chomp.upcase
+    puts ""
+    print "Stock => "
+    symbol = gets.chomp
+
+    # Takes user input and generates ticker symbol
+    url = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query=#{symbol}&region=1&lang=en%22"
+    response = RestClient.get(url)
+    parsed = JSON.parse(response)
+    parsed_symbol = parsed["ResultSet"]["Result"][0]["symbol"]
 
     # Rest API to fetch current JSON data
-    url = "http://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=#{symbol}&apikey=946DU3BV54DQIGIK"
+    url = "http://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=#{parsed_symbol}&apikey=946DU3BV54DQIGIK"
     response = RestClient.get(url)
     parsed = JSON.parse(response)
 
@@ -22,6 +29,7 @@ def stock_search
     parsed_price_chg = parsed["Realtime Global Securities Quote"]["08. Price Change"]
     parsed_price_pct = parsed["Realtime Global Securities Quote"]["09. Price Change Percentage"]
     parsed_volume = parsed["Realtime Global Securities Quote"]["10. Volume (Current Trading Day)"]
+    parsed_exchange = parsed["Realtime Global Securities Quote"]["02. Exchange Name"]
 
     # Output of parsed hash
     puts ""
@@ -33,6 +41,7 @@ def stock_search
     puts "| Price Chg: $#{parsed_price_chg}"
     puts "| Price Chg % : #{parsed_price_pct}"
     puts "| Volume: #{parsed_volume}"
+    puts "| Echange: #{parsed_exchange}"
     puts "======================"
     puts ""
 end
