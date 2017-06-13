@@ -5,19 +5,19 @@ require 'json'
 require 'rest-client'
 
 def ip_location()
-  print "What's the  IP? -> "
+  print "What's the  IP? => "
   ip = gets.chomp
 
   url = "http://ipinfo.io/#{ip}/json"
   response = RestClient.get(url)
   info = JSON.parse(response)
 
-  
+
   city = info["city"]
   region = info["region"]
   country = info["country"]
   hostname = info["hostname"]
-  
+
 
   puts ""
   puts "City: #{city}"
@@ -26,5 +26,5 @@ def ip_location()
   puts "Host: #{hostname}"
   puts ""
 end
-  
+
 ip_location()
