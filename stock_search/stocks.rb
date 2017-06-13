@@ -6,10 +6,27 @@ require 'json'
 
 def stock_search
     print "Stock symbol => "
-    symbol = gets.chomp
+    symbol = gets.chomp.upcase
 
-    url = "http://ipinfo.io/#{ip}/json"
+    url = "http://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=#{symbol}&apikey=946DU3BV54DQIGIK"
     response = RestClient.get(url)
-    stock_info = JSON.parse(response)
+    parsed = JSON.parse(response)
+
+    
+
+
+    puts ""
+    puts "======================|"
+    puts "| Symbol: "
+    puts "| Price: "
+    puts "| Open: "
+    puts "| High: "
+    puts "| Price Chg: "
+    puts "| Price Chg %: "
+    puts "| Volume: "
+    puts "|======================"
+    puts ""
 
 end
+
+stock_search
