@@ -14,5 +14,6 @@
 ![](https://media.giphy.com/media/l1BgSVMNupjCWKXqo/giphy.gif)
 
 ## Movie Search - Uses OMDB API to return movie data
-UPDATE => OMBD API is now private, and requires an API key for use
+ Update => OMBD API is now private, and requires an API key for use
+
 ![](https://media.giphy.com/media/xUPGcxoW2iL5y3R4c0/giphy.gif)
