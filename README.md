@@ -1,7 +1,14 @@
 # Ruby-Scripts
 
+## Installation
+Download folder as zip 
+```bash
+gem install rest-client
+```
+```bash
+ruby stocks.rb
+```
 ## Gems
-
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
 
 ## Stock Search - Returns current stock information
