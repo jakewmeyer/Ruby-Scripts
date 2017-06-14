@@ -31,7 +31,7 @@ Note => Requires use of a free API key, avaliable [here](https://www.apixu.com/)
 ## IP Location - Returns info about current WAN IP
 ![Imgur](http://i.imgur.com/dVUSPCm.png)
 
-## IP Geolocation Search
+## IP Geolocation - Returns geo info on a specified IP address
 ![Imgur](http://i.imgur.com/gzNXMU3.png)
 
 ## Movie Search - Uses OMDB API to return movie data
