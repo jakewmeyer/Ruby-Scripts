@@ -14,7 +14,7 @@ gem install rest-client
 ```bash
 ruby stocks.rb
 ```
-All the programs below are fully functional, with live, free, api keys. Don't abuse this gift.
+NOTE: All the programs below are fully functional, with live, free, api keys. Don't abuse this gift.
 ## Gems Used
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
 
@@ -22,7 +22,7 @@ All the programs below are fully functional, with live, free, api keys. Don't ab
 ![Screenshot](http://i.imgur.com/szDj53F.png)
 
 ## Weather Search - Returns current weather information based on IP
-Note => Requires use of a free API key, avaliable [here](https://www.apixu.com/)
+Uses the [APIXU](https://www.apixu.com/) weather api
 
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
@@ -36,7 +36,7 @@ Note => Requires use of a free API key, avaliable [here](https://www.apixu.com/)
 ![Imgur](http://i.imgur.com/gzNXMU3.png)
 
 ## Movie Search - Uses OMDB API to return movie data
- Update => [OMBDB](http://www.omdbapi.com/) API is now private, and requires an API key for use
+Uses the [OMBDB](http://www.omdbapi.com/) API for data.
 
 ![Imgur](http://i.imgur.com/3qTNcNY.png)
 
