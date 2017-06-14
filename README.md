@@ -29,6 +29,6 @@ Note => Requires use of a free API key, avaliable [here](https://www.apixu.com/)
 ![Imgur](http://i.imgur.com/gzNXMU3.png)
 
 ## Movie Search - Uses OMDB API to return movie data
- Update => OMBD API is now private, and requires an API key for use
+ Update => [OMBDB](http://www.omdbapi.com/) API is now private, and requires an API key for use
 
 ![Imgur](http://i.imgur.com/3qTNcNY.png)
