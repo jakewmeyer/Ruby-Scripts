@@ -14,6 +14,7 @@ gem install rest-client
 ```bash
 ruby stocks.rb
 ```
+All the programs below are fully functional, with live, free, api keys. Don't abuse this gift.
 ## Gems Used
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
 
