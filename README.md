@@ -2,10 +2,12 @@
     <img src="http://i.imgur.com/NcbZ2gM.png"
          height="240">
     <h1 align="center">Ruby Scripts</h1>
+    <h6 align="center">Useful scripts and tools written in ruby</h6>
+    <br></br>
 </p>
 
 
-## Installation
+## Install / Setup
 Download folder as zip
 ```bash
 gem install rest-client
@@ -13,7 +15,7 @@ gem install rest-client
 ```bash
 ruby stocks.rb
 ```
-## Gems
+## Gems Used
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
 
 ## Stock Search - Returns current stock information
@@ -37,3 +39,6 @@ Note => Requires use of a free API key, avaliable [here](https://www.apixu.com/)
  Update => [OMBDB](http://www.omdbapi.com/) API is now private, and requires an API key for use
 
 ![Imgur](http://i.imgur.com/3qTNcNY.png)
+
+## FAQ / Contact
+If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
