@@ -5,6 +5,7 @@ require 'rest-client'
 require 'json'
 
 def stock_search
+
     # Cptures user inputs
     puts ""
     print "Stock => "

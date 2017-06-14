@@ -1,7 +1,7 @@
 # Ruby-Scripts
 
 ## Installation
-Download folder as zip 
+Download folder as zip
 ```bash
 gem install rest-client
 ```
@@ -26,4 +26,4 @@ ruby stocks.rb
 ## Movie Search - Uses OMDB API to return movie data
  Update => OMBD API is now private, and requires an API key for use
 
-![](https://media.giphy.com/media/xUPGcxoW2iL5y3R4c0/giphy.gif)
+![Imgur](http://i.imgur.com/3qTNcNY.png)
