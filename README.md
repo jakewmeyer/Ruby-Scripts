@@ -2,7 +2,8 @@
     <img src="http://i.imgur.com/NcbZ2gM.png"
          height="240">
     <h2 align="center">Ruby Scripts</h2>
-    <h6 align="center">Useful scripts and tools written in ruby</h6>
+    <br></br>
+    <h5 align="center">Useful scripts and tools written in ruby</h5>
     <br></br>
 </p>
 
