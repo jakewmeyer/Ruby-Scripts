@@ -22,7 +22,7 @@ NOTE: All the programs below are fully functional, with live, free, api keys. Do
 ![Screenshot](http://i.imgur.com/szDj53F.png)
 
 ## Weather Search - Returns current weather information based on IP
-Uses the [APIXU](https://www.apixu.com/) weather api
+Uses the [APIXU](https://www.apixu.com/) weather api.
 
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
@@ -36,7 +36,7 @@ Uses the [APIXU](https://www.apixu.com/) weather api
 ![Imgur](http://i.imgur.com/gzNXMU3.png)
 
 ## Movie Search - Uses OMDB API to return movie data
-Uses the [OMBDB](http://www.omdbapi.com/) API for data.
+Uses the [OMBDB](http://www.omdbapi.com/) API.
 
 ![Imgur](http://i.imgur.com/3qTNcNY.png)
 
