@@ -14,6 +14,9 @@ ruby stocks.rb
 ## Stock Search - Returns current stock information
 ![Screenshot](http://i.imgur.com/szDj53F.png)
 
+## Weather Search - Returns current weather information based on IP
+![Imgur](http://i.imgur.com/xzfwJF9.png)
+
 ## IP List - Returns network information
 ![Imgur](http://i.imgur.com/Zj2fVrU.png)
 
