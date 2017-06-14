@@ -3,7 +3,8 @@
          height="240">
     <h1 align="center">Ruby Scripts</h1>
 </p>
-<br><br>
+
+
 ## Installation
 Download folder as zip
 ```bash
