@@ -1,8 +1,7 @@
 <p align="center">
     <img src="http://i.imgur.com/NcbZ2gM.png"
          height="240">
-    <h3 align="center">Ruby Scripts</h3>
-    <h6 align="center">Useful scripts and tools written in ruby</h6>
+    <h1 align="center">Ruby Scripts</h1>
     <br></br>
 </p>
 
