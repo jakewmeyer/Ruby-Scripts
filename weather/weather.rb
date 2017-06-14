@@ -6,8 +6,9 @@ require 'json'
 
 def weather_search
 
-    api_key = "12345678"
-    
+    # This key is functional, don't abuse it
+    api_key = "6510b92495fd472ca30155709172803&q"
+
     # Uses IP to get current city
     url = "http://ip-api.com/json"
     response = RestClient.get(url)

@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 # CLI app that searches stock info by symbol
+# No API key required
 
 require 'rest-client'
 require 'json'

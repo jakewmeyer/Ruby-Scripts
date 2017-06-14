@@ -13,6 +13,9 @@ end
 # Method for movie searching logic
 def movie_search
 
+    # This is a live API key, don't absue it
+    api_key = "946f500a"
+
   # Captures user input
   puts ""
   print "Movie =>  "
@@ -25,7 +28,7 @@ def movie_search
   else
 
   # API fetch for movie
-  url = "http://www.omdbapi.com/?t=#{movie_name}&apikey=946f500a"
+  url = "http://www.omdbapi.com/?t=#{movie_name}&apikey=#{api_key}"
   response = RestClient.get(url)
   info = JSON.parse(response)
 
