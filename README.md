@@ -15,6 +15,8 @@ ruby stocks.rb
 ![Screenshot](http://i.imgur.com/szDj53F.png)
 
 ## Weather Search - Returns current weather information based on IP
+Note => Requires use of a free API key, avaliable [here](https://www.apixu.com/)
+
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
 ## IP List - Returns network information
