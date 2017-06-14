@@ -1,4 +1,8 @@
-# Ruby-Scripts
+<p align="center">
+    <img src="http://i.imgur.com/NcbZ2gM.png"
+         height="240">
+    <h1 align="center">Ruby Scripts</h1>
+</p>
 
 ## Installation
 Download folder as zip
