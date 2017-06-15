@@ -10,7 +10,7 @@ def ip_location
   ip = gets.chomp
 
   begin
-    url = "http://ipinfo.io/#{ip}/json"
+    url = "http://ip-api.com/json/#{ip}"
     response = RestClient.get(url)
     info = JSON.parse(response)
   rescue
@@ -20,18 +20,30 @@ def ip_location
     exit(0)
   end
 
+  ip = info['query']
   city = info['city']
   region = info['region']
   country = info['country']
-  hostname = info['hostname']
+  isp = info['isp']
+  zip = info['zip']
 
-
-  puts ''
-  puts "City: #{city}"
-  puts "Region: #{region}"
-  puts "Country: #{country}"
-  puts "Host: #{hostname}"
-  puts ''
+  if city.nil?
+    puts ''
+    puts 'IP not found.'
+    puts ''
+    exit(0)
+  else
+    puts ''
+    puts '==========================='
+    puts "IP: #{ip}"
+    puts "City: #{city}"
+    puts "Region: #{region}"
+    puts "Country: #{country}"
+    puts "ZIP: #{zip}"
+    puts "ISP: #{isp}"
+    puts '==========================='
+    puts ''
+  end
 end
 
 ip_location
