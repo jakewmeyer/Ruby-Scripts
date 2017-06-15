@@ -2,8 +2,8 @@
 # Gets public IP, Lan IP, router IP, and DNS IP
 # Compiles to a nice list
 
-require 'Rest-Client'
-require 'Socket'
+require 'rest-client'
+require 'socket'
 
 def network_info
   # Grabs public WAN address
@@ -51,4 +51,4 @@ def network_info
   puts ""
 end
 
-network_info()
+network_info
