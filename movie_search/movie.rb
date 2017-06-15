@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # CLI app that searched movies and returns info
 
-require 'Rest-Client'
+require 'rest-client'
 require 'json'
 
 # Word wrapping method
