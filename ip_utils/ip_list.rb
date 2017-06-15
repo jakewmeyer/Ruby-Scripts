@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
-# Gets public IP, Lan IP, router IP, and DNS IP
-# Compiles to a nice list
+# Gets WAN IP, Lan IP, Router IP, and DNS Server.
+# Compiles to a nice list.
 
 require 'rest-client'
 require 'socket'
 
 def network_info
-  # Grabs public WAN address
+  # Grabs public WAN address.
   begin
     url = "https://api.ipify.org"
     response = RestClient.get(url)
@@ -15,7 +15,7 @@ def network_info
     exit(0)
   end
 
-  # Grabs assigned IP and formats it
+  # Grabs assigned IP and formats it.
   begin
     ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
     lan = ip.ip_address
@@ -24,7 +24,7 @@ def network_info
     exit(0)
   end
 
-  # Greps scutil for DNS server
+  # Greps scutil for DNS server.
   begin
     dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
   rescue
@@ -32,7 +32,7 @@ def network_info
     exit(0)
   end
 
-  # Greps netstat for router address
+  # Greps netstat for router address.
   begin
     router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
   rescue
@@ -40,7 +40,6 @@ def network_info
     exit(0)
   end
 
-  # Formatting
   puts ""
   puts "======================"
   puts "| WAN: #{response}"
