@@ -19,7 +19,7 @@ NOTE: All the programs below are fully functional, with live, free, api keys. Do
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
 
 ## Stock Search - Returns current stock information
-![Imgur](http://i.imgur.com/LpIFAdf.png)
+![Imgur](http://i.imgur.com/6SMWde5.png)
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
