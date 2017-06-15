@@ -27,13 +27,13 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
 ## IP List - Returns network information
-![Imgur](http://i.imgur.com/Zj2fVrU.png)
+![Imgur](http://i.imgur.com/pcyIjKN.png)
 
 ## IP Location - Returns info about current WAN IP
-![Imgur](http://i.imgur.com/dVUSPCm.png)
+![Imgur](http://i.imgur.com/Csg0FXk.png)
 
 ## IP Geolocation - Returns geo info on a specified IP address
-![Imgur](http://i.imgur.com/gzNXMU3.png)
+![Imgur](http://i.imgur.com/bvsDVQD.png)
 
 ## Movie Search - Uses OMDB API to return movie data
 Uses the [OMBDB](http://www.omdbapi.com/) API.
