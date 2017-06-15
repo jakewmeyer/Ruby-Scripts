@@ -19,7 +19,7 @@ NOTE: All the programs below are fully functional, with live, free, api keys. Do
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
 
 ## Stock Search - Returns current stock information
-![Screenshot](http://i.imgur.com/szDj53F.png)
+![Imgur](http://i.imgur.com/LpIFAdf.png)
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
@@ -38,7 +38,7 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 ## Movie Search - Uses OMDB API to return movie data
 Uses the [OMBDB](http://www.omdbapi.com/) API.
 
-![Imgur](http://i.imgur.com/3qTNcNY.png)
+![Imgur](http://i.imgur.com/Gj4AjmZ.png)
 
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged
