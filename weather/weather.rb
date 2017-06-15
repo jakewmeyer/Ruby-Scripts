@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# CLI app that brings in current location weather
+# CLI app that brings in current location weather.
 
 require 'rest-client'
 require 'json'
