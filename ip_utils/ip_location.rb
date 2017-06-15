@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 #CLI app to locate your current public IP
+
 require 'Rest-Client'
 require 'json'
 
