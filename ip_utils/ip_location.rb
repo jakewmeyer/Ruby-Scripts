@@ -1,11 +1,10 @@
 #!/usr/bin/env ruby
-#CLI app to locate your current public IP
+# Returns geolocation data for current IP
 
 require 'Rest-Client'
 require 'json'
 
 def ip_current_geo
-
   begin
     url = "http://ip-api.com/json"
     response = RestClient.get(url)
@@ -22,7 +21,7 @@ def ip_current_geo
   region = info["region"]
   country = info["country"]
   isp = info["isp"]
-  org = info["org"]
+  zip = info['zip']
 
   if city.nil?
     puts ''
@@ -30,12 +29,16 @@ def ip_current_geo
     puts ''
     exit(0)
   else
+    puts ''
+    puts '==========================='
     puts "IP: #{ip}"
     puts "City: #{city}"
     puts "Region: #{region}"
     puts "Country: #{country}"
+    puts "ZIP: #{zip}"
     puts "ISP: #{isp}"
-    puts "ORG: #{org}"
+    puts '==========================='
+    puts ''
   end
 end
 
