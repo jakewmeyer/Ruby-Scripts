@@ -13,7 +13,6 @@ def movie
   # This is a live API key, don't absue it
   api_key = '946f500a'
 
-  # Captures user input
   puts ''
   print 'Movie =>  '
   movie_name = gets.chomp
@@ -23,7 +22,6 @@ def movie
     puts ''
     exit(0)
   else
-    # API fetch for movie
     url = "http://www.omdbapi.com/?t=#{movie_name}&apikey=#{api_key}"
     response = RestClient.get(url)
     info = JSON.parse(response)
@@ -53,7 +51,6 @@ def movie
     plot_unformatted = info['Plot']
     plot = wrap(plot_unformatted, 48)
 
-    # Format for printing to screen
     puts ''
     puts '=================================================='
     puts "| Title: #{title}"
