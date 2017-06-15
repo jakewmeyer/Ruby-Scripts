@@ -4,17 +4,14 @@
 require 'Rest-Client'
 require 'json'
 
-
 # Word wrapping method
 def wrap(s, width=78)
   s.gsub(/(.{1,#{width}})(\s+|\Z)/, "\\1\n| ")
 end
 
-# Method for movie searching logic
 def movie_search
-
-    # This is a live API key, don't absue it
-    api_key = "946f500a"
+  # This is a live API key, don't absue it
+  api_key = "946f500a"
 
   # Captures user input
   puts ""
@@ -23,53 +20,52 @@ def movie_search
 
   # Program escape statements
   if movie_name == "quit" || movie_name == "exit"
-      puts ""
-      exit(0)
+    puts ""
+    exit(0)
   else
-
-  # API fetch for movie
-  url = "http://www.omdbapi.com/?t=#{movie_name}&apikey=#{api_key}"
-  response = RestClient.get(url)
-  info = JSON.parse(response)
+    # API fetch for movie
+    url = "http://www.omdbapi.com/?t=#{movie_name}&apikey=#{api_key}"
+    response = RestClient.get(url)
+    info = JSON.parse(response)
+  end
 
   # Exception for invalid response
   if info["Response"] == "False"
-      puts ""
-      puts "No Movie Found"
-      puts ""
-      exit(0)
+    puts ""
+    puts "No Movie Found"
+    puts ""
+    exit(0)
   else
-
-  # Rescue if no tomato score
-  # Word wrap added to plot and actors
-  begin
-  title = info["Title"]
-  year = info["Year"]
-  score = info["Ratings"][1]["Value"]
-  rescue
+    # Rescue if no tomato score
+    # Word wrap added to plot and actors
+    begin
+      title = info["Title"]
+      year = info["Year"]
+      score = info["Ratings"][1]["Value"]
+    rescue
       score = "No Score Found"
-  end
-  rated = info["Rated"]
-  genre = info["Genre"]
-  director = info["Director"]
-  actors = wrap(info["Actors"], 48)
-  plot_unformatted = info["Plot"]
-  plot = wrap(plot_unformatted, 48)
+    end
 
-  # Format for printing to screen
-  puts ""
-  puts "=================================================="
-  puts "| Title: #{title}"
-  puts "| Year: #{year}"
-  puts "| Tomato: #{score}"
-  puts "| Rated: #{rated}"
-  puts "| Genre: #{genre}"
-  puts "| Director: #{director}"
-  puts "| Actors: #{actors}"
-  puts "| Plot: #{plot}"
-  puts "=================================================="
-  puts ""
-  end
+    rated = info["Rated"]
+    genre = info["Genre"]
+    director = info["Director"]
+    actors = wrap(info["Actors"], 48)
+    plot_unformatted = info["Plot"]
+    plot = wrap(plot_unformatted, 48)
+
+    # Format for printing to screen
+    puts ""
+    puts "=================================================="
+    puts "| Title: #{title}"
+    puts "| Year: #{year}"
+    puts "| Tomato: #{score}"
+    puts "| Rated: #{rated}"
+    puts "| Genre: #{genre}"
+    puts "| Director: #{director}"
+    puts "| Actors: #{actors}"
+    puts "| Plot: #{plot}"
+    puts "=================================================="
+    puts ""
   end
 end
 
