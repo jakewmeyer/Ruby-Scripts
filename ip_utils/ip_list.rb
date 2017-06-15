@@ -6,11 +6,10 @@ require 'Rest-Client'
 require 'Socket'
 
 def network_info
-
   # Grabs public WAN address
   begin
-  url = "https://api.ipify.org"
-  response = RestClient.get(url)
+    url = "https://api.ipify.org"
+    response = RestClient.get(url)
   rescue
     puts "Can't find WAN"
     exit(0)
@@ -18,8 +17,8 @@ def network_info
 
   # Grabs assigned IP and formats it
   begin
-  ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
-  lan = ip.ip_address
+    ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
+    lan = ip.ip_address
   rescue
     puts "Cant find LAN"
     exit(0)
@@ -27,7 +26,7 @@ def network_info
 
   # Greps scutil for DNS server
   begin
-  dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
+    dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
   rescue
     puts "Can't find DNS"
     exit(0)
@@ -35,7 +34,7 @@ def network_info
 
   # Greps netstat for router address
   begin
-  router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
+    router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
   rescue
     puts "Can't find Router"
     exit(0)
