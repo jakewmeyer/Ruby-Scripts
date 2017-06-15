@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 #CLI program to find IP geolocation
 
-require 'json'
 require 'rest-client'
+require 'json'
 
 def ip_location
   puts ''

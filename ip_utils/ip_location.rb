@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Returns geolocation data for current IP
 
-require 'Rest-Client'
+require 'rest-client'
 require 'json'
 
 def ip_current_geo
