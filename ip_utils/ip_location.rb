@@ -30,14 +30,14 @@ def ip_current_geo
     exit(0)
   else
     puts ''
-    puts '==========================='
-    puts "IP: #{ip}"
-    puts "City: #{city}"
-    puts "Region: #{region}"
-    puts "Country: #{country}"
-    puts "ZIP: #{zip}"
-    puts "ISP: #{isp}"
-    puts '==========================='
+    puts '============================='
+    puts "| IP: #{ip}"
+    puts "| City: #{city}"
+    puts "| Region: #{region}"
+    puts "| Country: #{country}"
+    puts "| ZIP: #{zip}"
+    puts "| ISP: #{isp}"
+    puts '============================='
     puts ''
   end
 end
