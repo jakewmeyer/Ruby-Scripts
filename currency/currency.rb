@@ -8,7 +8,7 @@ require 'rest-client'
 require 'json'
 require 'money'
 require 'monetize'
-require 'money-heuristics'
+
 
 def conversion
   # User input
@@ -32,19 +32,13 @@ def conversion
     exit(0)
   end
 
-  # Fixes local exception bug
+  # Fixes locale exception bug
   I18n.enforce_available_locales = false
 
   # Creates money exchange rate and new money object
-  begin
-    Money.add_rate(base_currency, convert_to, convert_factor)
-    initial = Monetize.parse("#{base_currency} #{initial_amount}")
-    final_convert = initial.exchange_to(convert_to)
-  rescue
-    puts ''
-    puts 'No currency found'
-    puts ''
-  end
+  Money.add_rate(base_currency, convert_to, convert_factor)
+  initial = Monetize.parse("#{base_currency} #{initial_amount}")
+  final_convert = initial.exchange_to(convert_to)
 
   # Output formatting
   puts ''
