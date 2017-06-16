@@ -7,14 +7,13 @@
 require 'rest-client'
 require 'json'
 require 'money'
+require 'monetize'
 
 # User input
 print "Base - Ex.'USD' => "
 base_currency = gets.chomp.upcase
-money = Money.new(100, "EUR")
-puts money.format
 print "Amount - Ex.'13.76' => "
-initial_amount = Money.new(gets.chomp, base_currency)
+initial_amount = gets.chomp
 print "Convert to - Ex.'EUR' => "
 convert_to = gets.chomp.upcase
 
@@ -26,13 +25,16 @@ convert_factor = (parsed['rates'][convert_to])
 
 # Conversion setup and logic
 Money.add_rate(base_currency, convert_to, convert_factor)
-final_convert = initial_amount.exchange_to(convert_to)
+
+initial = Monetize.parse("#{base_currency} #{initial_amount}")
+
+final_convert = initial.exchange_to(convert_to)
 
 # Output formatting
 puts ''
 puts '================='
 puts "| #{base_currency} to #{convert_to}"
-puts "| #{base_currency}: #{initial_amount.format}"
-puts "| #{convert_to}: #{final_convert.format}"
+puts "| #{base_currency}: #{initial}"
+puts "| #{convert_to}: #{final_convert}"
 puts '================='
 puts ''
