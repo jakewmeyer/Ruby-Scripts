@@ -8,6 +8,7 @@ require 'rest-client'
 require 'json'
 require 'money'
 require 'monetize'
+require 'money-heuristics'
 
 def conversion
   # User input
@@ -19,18 +20,31 @@ def conversion
   convert_to = gets.chomp.upcase
 
   # Fetches API info
-  url = "http://api.fixer.io/latest?base=#{base_currency}&symbols=#{convert_to}"
-  response = RestClient.get(url)
-  parsed = JSON.parse(response)
-  convert_factor = (parsed['rates'][convert_to])
+  begin
+    url = "http://api.fixer.io/latest?base=#{base_currency}&symbols=#{convert_to}"
+    response = RestClient.get(url)
+    parsed = JSON.parse(response)
+    convert_factor = (parsed['rates'][convert_to])
+  rescue
+    puts ''
+    puts 'No exchange rate found'
+    puts ''
+    exit(0)
+  end
 
   # Fixes local exception bug
   I18n.enforce_available_locales = false
 
   # Creates money exchange rate and new money object
-  Money.add_rate(base_currency, convert_to, convert_factor)
-  initial = Monetize.parse("#{base_currency} #{initial_amount}")
-  final_convert = initial.exchange_to(convert_to)
+  begin
+    Money.add_rate(base_currency, convert_to, convert_factor)
+    initial = Monetize.parse("#{base_currency} #{initial_amount}")
+    final_convert = initial.exchange_to(convert_to)
+  rescue
+    puts ''
+    puts 'No currency found'
+    puts ''
+  end
 
   # Output formatting
   puts ''
@@ -41,3 +55,5 @@ def conversion
   puts '================'
   puts ''
 end
+
+conversion
