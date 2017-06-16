@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 # CLI app for currency conversion
-# Uses BigDecimal for accuracy
-# Uses Fixer.io for data
+# Uses Ruby Money for accuracy
+# Uses Fixer.io for exchange data
 
 require 'rest-client'
 require 'json'
@@ -22,22 +22,16 @@ convert_to = gets.chomp.upcase
 url = "http://api.fixer.io/latest?base=#{base_currency}&symbols=#{convert_to}"
 response = RestClient.get(url)
 parsed = JSON.parse(response)
-
-# Finds proper currency symbols for output
-currency_initial = ISO4217::Currency.from_code(base_currency)
-initial_symbol = currency_initial.symbol
-currency_final = ISO4217::Currency.from_code(convert_to)
-final_symbol = currency_final.symbol
-
-# Runs conversion logic
-convert_factor = (parsed['rates'][convert_to]).to_d
-final_convert = initial_amount * convert_factor
+convert_factor = (parsed['rates'][convert_to])
 
 
+Money.add_rate("USD", "CAD", 1.24515)
+
+# Output formatting
 puts ''
 puts '================='
 puts "| #{base_currency} to #{convert_to}"
-puts "| #{base_currency}: #{initial_symbol}#{initial_amount}"
-puts "| #{convert_to}: #{final_symbol}#{final_convert}"
+puts "| #{base_currency}: #{initial_symbol}#{initial_amount.to_s}"
+puts "| #{convert_to}: #{final_symbol}#{final_convert.to_s}"
 puts '================='
 puts ''
