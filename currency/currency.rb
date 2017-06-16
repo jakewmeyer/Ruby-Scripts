@@ -27,7 +27,7 @@ def conversion
   # Fixes local exception bug
   I18n.enforce_available_locales = false
 
-  # Conversion setup and logic
+  # Creates money exchange rate and new money object
   Money.add_rate(base_currency, convert_to, convert_factor)
   initial = Monetize.parse("#{base_currency} #{initial_amount}")
   final_convert = initial.exchange_to(convert_to)
