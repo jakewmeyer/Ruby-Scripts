@@ -6,15 +6,15 @@
 
 require 'rest-client'
 require 'json'
-require 'bigdecimal'
-require 'bigdecimal/util'
-require 'currencies'
+require 'money'
 
 # User input
 print "Base - Ex.'USD' => "
 base_currency = gets.chomp.upcase
+money = Money.new(100, "EUR")
+puts money.format
 print "Amount - Ex.'13.76' => "
-initial_amount = BigDecimal(gets.chomp)
+initial_amount = Money.new(gets.chomp, base_currency)
 print "Convert to - Ex.'EUR' => "
 convert_to = gets.chomp.upcase
 
@@ -24,14 +24,15 @@ response = RestClient.get(url)
 parsed = JSON.parse(response)
 convert_factor = (parsed['rates'][convert_to])
 
-
-Money.add_rate("USD", "CAD", 1.24515)
+# Conversion setup and logic
+Money.add_rate(base_currency, convert_to, convert_factor)
+final_convert = initial_amount.exchange_to(convert_to)
 
 # Output formatting
 puts ''
 puts '================='
 puts "| #{base_currency} to #{convert_to}"
-puts "| #{base_currency}: #{initial_symbol}#{initial_amount.to_s}"
-puts "| #{convert_to}: #{final_symbol}#{final_convert.to_s}"
+puts "| #{base_currency}: #{initial_amount.format}"
+puts "| #{convert_to}: #{final_convert.format}"
 puts '================='
 puts ''
