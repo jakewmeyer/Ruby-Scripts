@@ -13,6 +13,9 @@ This uses install.sh to install all necessary gems in one go.
 ```bash
 curl -sSL https://git.io/vHp98 | sh
 ```
+```bash
+ruby stocks.rb
+```
 NOTE: All the programs below are fully functional, with live, free, api keys. Don't abuse this gift.
 ## Gems Used
 * [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
