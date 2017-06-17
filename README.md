@@ -8,15 +8,8 @@
 
 ## Install / Setup
 Download folder as zip
-```bash
-gem install rest-client
-```
-```bash
-ruby stocks.rb
-```
 
-NOTE: Currently testing install.sh
-Do not use yet
+This uses install.sh to install all necessary gems in one go.
 ```bash
 curl -sSL https://git.io/vHp98 | sh
 ```
