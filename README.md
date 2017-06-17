@@ -18,7 +18,9 @@ ruby stocks.rb
 ```
 NOTE: All the programs below are fully functional, with live, free, api keys. Don't abuse this gift.
 ## Gems Used
-* [Rest-Client](https://rubygems.org/gems/rest-client) - Client for making HTTP requests in ruby
+* [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
+* [Ruby Money](https://github.com/RubyMoney/money) - Ruby library for accurate currency management
+* [Monetize](https://github.com/RubyMoney/monetize) - Ruby library for money object creation
 
 ## Stock Search - Returns current stock information
 ![Imgur](http://i.imgur.com/LpIFAdf.png)
