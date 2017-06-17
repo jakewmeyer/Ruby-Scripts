@@ -10,6 +10,10 @@
 [![GitHub release](https://img.shields.io/badge/language-Ruby-red.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]() [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 [![License](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
 
+### Stock Search / Currency Converter / Weather Search / Movie Search / IP Geolocation / IP List 
+
+
+
 </div>
 <br></br>
 
