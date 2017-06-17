@@ -14,7 +14,6 @@ curl -sSL https://git.io/vHp98 | sh
 ```bash
 ruby stocks.rb
 ```
-NOTE: All the programs below are fully functional, with live, free, api keys. Don't abuse this gift.
 ## Gems Used
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby library for accurate currency management
@@ -48,6 +47,8 @@ Uses the [OMBDB](http://www.omdbapi.com/) API.
 ![Imgur](http://i.imgur.com/Gj4AjmZ.png)
 
 ## FAQ / Contact
-* If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged
+* If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
+* All Programs are fully functional, with live API keys baked in.
+* NOTE: ip_list will only work on a Mac, due to OS specific commands used in the program.
 * Terminal used is [Hyper.js](https://hyper.is/) -> Background Color: #292937
 * Using [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh), Robby Russell theme, [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), and [zsh_autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
