@@ -19,13 +19,13 @@ def padlock
     opts.on_tail("-e", "--encrypt ", "Encrypts the selected file.") do |e|
     options[:encrypt] = e
     file = options[:encrypt]
-    %x[openssl enc -aes-256-cbc -salt -a -in #{file} -out #{file}]
+    %x[openssl enc -aes-256-cbc -salt -a -in #{file} -out #{file}_enc]
     end
 
     opts.on_tail("-d", "--decrypt " , "Decrypts the selected file.") do |d|
     options[:decrypt] = d
     file = options[:decrypt]
-    %x[openssl enc -aes-256-cbc -d -a -in #{file} -out #{file}]
+    %x[openssl enc -aes-256-cbc -d -a -in #{file} -out #{file}_dec]
     end
 
     opts.on_tail("-h", "--help", "Show help message") do
