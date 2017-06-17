@@ -9,3 +9,6 @@ gem install rest-client
 gem install money
 gem install monetize
 echo "Finished gem install"
+echo " "
+
+curl -o $HOME 'https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip'
