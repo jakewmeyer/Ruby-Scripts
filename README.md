@@ -25,7 +25,7 @@ ruby stocks.rb
 ## Currency Exchange - Returns converted currency based on realtime exchange rates
 Uses [Fixer.io](http://fixer.io/) for exchange data.
 
-![Imgur](http://i.imgur.com/Wkw7R7b.png)
+![Imgur](http://i.imgur.com/KSP7wOo.png)
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
