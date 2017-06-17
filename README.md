@@ -23,6 +23,11 @@ NOTE: All the programs below are fully functional, with live, free, api keys. Do
 ## Stock Search - Returns current stock information
 ![Imgur](http://i.imgur.com/LpIFAdf.png)
 
+## Currency Exchange - Returns converted currency based on realtime exchange rates
+Uses [Fixer.io](http://fixer.io/) for exchange data.
+
+![Imgur](http://i.imgur.com/5gSleAP.png)
+
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
 

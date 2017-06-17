@@ -12,6 +12,7 @@ require 'monetize'
 
 def conversion
   # User input
+  puts ''
   print "Base => "
   base_currency = gets.chomp.upcase
   print "Amount => "
