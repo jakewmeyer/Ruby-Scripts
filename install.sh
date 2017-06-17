@@ -11,4 +11,4 @@ gem install monetize
 echo "Finished gem install"
 echo " "
 
-curl -o 'https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip'
+curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
