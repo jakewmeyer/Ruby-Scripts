@@ -12,11 +12,11 @@ require 'monetize'
 
 def conversion
   # User input
-  print "Base - Ex.'USD' => "
+  print "Base => "
   base_currency = gets.chomp.upcase
-  print "Amount - Ex.'13.76' => "
+  print "Amount => "
   initial_amount = gets.chomp
-  print "Convert to - Ex.'EUR' => "
+  print "Convert to => "
   convert_to = gets.chomp.upcase
 
   # Fetches API info
