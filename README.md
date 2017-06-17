@@ -1,6 +1,6 @@
 <div align="center">
 
-[Imgur](http://i.imgur.com/3DhlBWZ.png)
+![Imgur](http://i.imgur.com/3DhlBWZ.png)
 
 # Ruby Scripts
 
