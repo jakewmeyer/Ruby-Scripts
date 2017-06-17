@@ -1,10 +1,10 @@
 <div align="center">
 
-![Imgur](http://i.imgur.com/k8T8fiV.png)
+[Imgur](http://i.imgur.com/3DhlBWZ.png)
 
 # Ruby Scripts
 
-### A collection of useful(but short) scripts, tools, and utilities, designed to make life easier for those who live in the command line.
+### A collection of useful (but short) scripts, tools, and utilities, designed to make life easier for those who live in the command line.
 
 [![GitHub release](https://img.shields.io/github/release/jakewmeyer/Ruby-Scripts.svg)]()
 [![GitHub release](https://img.shields.io/badge/language-Ruby-red.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]() [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
