@@ -7,9 +7,7 @@
 
 
 ## Install / Setup
-Download folder as zip
-
-This uses install.sh to install all necessary gems in one go.
+Installs necessary gems and downloads the files as master.zip
 ```bash
 curl -sSL https://git.io/vHp98 | sh
 ```
