@@ -45,6 +45,7 @@ def conversion
   puts ''
   puts '================'
   puts "| #{base_currency} to #{convert_to}"
+  puts "| RATE: #{convert_factor}"
   puts "| #{base_currency}: #{initial.format}"
   puts "| #{convert_to}: #{final_convert.format}"
   puts '================'
