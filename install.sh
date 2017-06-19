@@ -6,10 +6,12 @@
 
 # TO DO: Needs to test for active ruby version first
 
-echo "Installing"
+echo " => Installing"
+echo ''
 gem install rest-client
 gem install money
 gem install monetize
-echo "Finished gem install"
+echo ''
+echo "=> Finished gem install"
 
 curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
