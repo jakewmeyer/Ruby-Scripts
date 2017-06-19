@@ -4,7 +4,6 @@
 # it downloads the files, and installs all
 # the gems necessary to run them
 
-# TO DO: Needs to test for active ruby version first
 
 echo " => Installing"
 echo ''
@@ -15,3 +14,6 @@ echo ''
 echo "=> Finished gem install"
 
 curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
+
+echo "=> Finished file download"
+exit 0
