@@ -46,6 +46,7 @@ encrypt [original file] [encrypted file]
 decrypt [encrypted file] [output file]
 ```
 CAUTION: Make sure you don't name your decrypt output the same as the original file name. Otherwise it will be overwritten!
+
 ![Imgur](http://i.imgur.com/0bJi1Ds.png)
 
 ## Weather Search - Returns current weather information based on IP
