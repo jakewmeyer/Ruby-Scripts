@@ -7,10 +7,10 @@
 ### A collection of ruby scripts for those who live in the command line.
 
 [![GitHub release](https://img.shields.io/github/release/jakewmeyer/Ruby-Scripts.svg)]()
-[![GitHub release](https://img.shields.io/badge/language-Ruby-red.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]() [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
+[![GitHub release](https://img.shields.io/badge/language-Ruby-red.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 [![License](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
 
-### Stock Search / Currency Converter / Weather Search / Movie Search / IP Geolocation / IP List 
+### Stock Search / File Encryptor / Currency Converter / Weather Search / Movie Search / IP Geolocation / IP List
 
 
 
@@ -18,13 +18,15 @@
 <br></br>
 
 ## Install / Setup
-Installs necessary gems and downloads the files as master.zip
+###### Installs necessary gems and downloads the files as master.zip
 ```bash
 curl -sSL https://git.io/vHp98 | sh
 ```
 ```bash
 ruby stocks.rb
 ```
+
+###### I've also included a folder "bin" with the same programs configured as scripts, with the .rb removed, and execute privileges given. By adding these programs to a bin folder in your PATH, you can run the commands like shown in the screenshots.
 ## Gems Used
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby library for accurate currency management
@@ -37,6 +39,9 @@ ruby stocks.rb
 Uses [Fixer.io](http://fixer.io/) for exchange data.
 
 ![Imgur](http://i.imgur.com/KSP7wOo.png)
+
+## File Encryptor - Uses OpenSSL to encrypt and decrypt files with a password
+![]()
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
