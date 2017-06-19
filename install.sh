@@ -4,19 +4,12 @@
 # it downloads the files, and installs all
 # the gems necessary to run them
 
-$ruby = ruby -v
+# TO DO: Needs to test for ctive ruby version first
 
-if [ -z "$ruby" ]
-then
-      echo "You don't have a version of ruby!"
-      exit 1
-else
-  echo "Installing"
-  gem install rest-client
-  gem install money
-  gem install monetize
-  echo "Finished gem install"
+echo "Installing"
+gem install rest-client
+gem install money
+gem install monetize
+echo "Finished gem install"
 
-  curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
-
-fi
+curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
