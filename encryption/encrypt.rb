@@ -11,3 +11,5 @@ def encrypt
   output_file = ARGV[1]
   %x[openssl enc -aes-256-cbc -salt -a -in #{input_file} -out #{output_file}]
 end
+
+encrypt
