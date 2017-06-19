@@ -9,10 +9,10 @@
 def decrypt
   input_file = ARGV[0]
   output_file = ARGV[1]
-  unless %x[openssl enc -aes-256-cbc -d -a -in #{input_file} -out #{output_file}]
-    puts 'Sucessfully decrypted'
+  unless system("%x[openssl enc -aes-256-cbc -d -a -in #{input_file} -out #{output_file}")
+    puts "Files not found!"
   end
-  puts "Files not found!"
+  puts 'Sucessfully decrypted'
 end
 
 decrypt
