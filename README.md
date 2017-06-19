@@ -39,6 +39,7 @@ I've also included a folder "bin" with the same programs configured as scripts, 
 
 ## Currency Exchange - Returns converted currency based on realtime exchange rates
 Uses [Fixer.io](http://fixer.io/) for exchange data.
+
 Uses [Ruby Money](https://github.com/RubyMoney/money) for conversion accuracy + currency symbols
 
 ![Imgur](http://i.imgur.com/KSP7wOo.png)
