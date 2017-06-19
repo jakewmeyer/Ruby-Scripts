@@ -7,8 +7,9 @@
 ### A collection of ruby scripts for those who live in the command line.
 
 [![GitHub release](https://img.shields.io/github/release/jakewmeyer/Ruby-Scripts.svg)]()
-[![Language](https://img.shields.io/badge/language-Ruby-red.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()[
-![Code](https://api.codacy.com/project/badge/Grade/501aa5aee5854d34831a685fae05314d)](https://www.codacy.com/app/jakewmeyer/Ruby-Scripts?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jakewmeyer/Ruby-Scripts&amp;utm_campaign=Badge_Grade)
+[![Language](https://img.shields.io/badge/language-Ruby-red.svg)]()
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/501aa5aee5854d34831a685fae05314d)](https://www.codacy.com/app/jakewmeyer/Ruby-Scripts?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jakewmeyer/Ruby-Scripts&amp;utm_campaign=Badge_Grade)
 [![Platform](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
 
 ### Stock Search / File Encryptor / Currency Converter / Weather Search / Movie Search / IP Geolocation / IP List
