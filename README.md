@@ -41,7 +41,11 @@ Uses [Fixer.io](http://fixer.io/) for exchange data.
 ![Imgur](http://i.imgur.com/KSP7wOo.png)
 
 ## File Encryptor - Uses OpenSSL to encrypt and decrypt files with a password
-![]()
+```bash
+encrypt [original file] [encrypted file]
+decrypt [encrypted file] [original file]
+```
+![Imgur](http://i.imgur.com/0bJi1Ds.png)
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
