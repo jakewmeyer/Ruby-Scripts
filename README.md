@@ -6,6 +6,7 @@
 
 ### A collection of ruby scripts for those who live in the command line.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/501aa5aee5854d34831a685fae05314d)](https://www.codacy.com/app/jakewmeyer/Ruby-Scripts?utm_source=github.com&utm_medium=referral&utm_content=jakewmeyer/Ruby-Scripts&utm_campaign=badger)
 [![GitHub release](https://img.shields.io/github/release/jakewmeyer/Ruby-Scripts.svg)]()
 [![CodacyBadge](https://api.codacy.com/project/badge/Grade/501aa5aee5854d34831a685fae05314d)](https://www.codacy.com/app/jakewmeyer/Ruby-Scripts?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jakewmeyer/Ruby-Scripts&amp;utm_campaign=Badge_Grade)
 [![Language](https://img.shields.io/badge/language-Ruby-red.svg)]()
