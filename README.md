@@ -43,8 +43,9 @@ Uses [Fixer.io](http://fixer.io/) for exchange data.
 ## File Encryptor - Uses OpenSSL to encrypt and decrypt files with a password
 ```bash
 encrypt [original file] [encrypted file]
-decrypt [encrypted file] [original file]
+decrypt [encrypted file] [output file]
 ```
+CAUTION: Make sure you don't name your decrypt output the same as the original file name. Otherwise it will be overwritten!
 ![Imgur](http://i.imgur.com/0bJi1Ds.png)
 
 ## Weather Search - Returns current weather information based on IP
