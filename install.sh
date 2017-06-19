@@ -4,7 +4,7 @@
 # it downloads the files, and installs all
 # the gems necessary to run them
 
-# TO DO: Needs to test for ctive ruby version first
+# TO DO: Needs to test for active ruby version first
 
 echo "Installing"
 gem install rest-client
