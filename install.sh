@@ -4,10 +4,19 @@
 # it downloads the files, and installs all
 # the gems necessary to run them
 
-echo "Installing"
-gem install rest-client
-gem install money
-gem install monetize
-echo "Finished gem install"
+$ruby = ruby -v
 
-curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
+if [ -z "$ruby" ]
+then
+      echo "You don't have a version of ruby!"
+      exit 1
+else
+  echo "Installing"
+  gem install rest-client
+  gem install money
+  gem install monetize
+  echo "Finished gem install"
+
+  curl -LO https://github.com/jakewmeyer/Ruby-Scripts/archive/master.zip
+
+fi
