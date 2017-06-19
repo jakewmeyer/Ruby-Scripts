@@ -53,7 +53,7 @@ decrypt [encrypted file] [output file]
 
 **Tested With** => .pdf, .txt, .docx, .doc, .png, .jpeg
 
-**CAUTION**: Make sure to use different filenames, otherwise your file will be overwritten!
+**CAUTION** => Make sure to use different filenames, otherwise your file will be overwritten!
 
 ![Imgur](http://i.imgur.com/0bJi1Ds.png)
 
