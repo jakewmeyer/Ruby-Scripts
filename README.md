@@ -55,7 +55,7 @@ decrypt [encrypted file] [output file]
 
 **CAUTION** => Make sure to use different filenames, otherwise your file will be overwritten!
 
-![Imgur](http://i.imgur.com/0bJi1Ds.png)
+![Imgur](http://i.imgur.com/C3lnqBl.png)
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api.
