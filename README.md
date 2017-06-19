@@ -51,9 +51,9 @@ decrypt [encrypted file] [output file]
 * Password is never in plain text, and OpenSSL generates key based on password
 * Data is encrypted in Base64, so it can be used as plain text in an email. (Not usually necessary if attached as a file)
 
-**CAUTION**: Make sure to use different filenames, otherwise your file will be overwritten!
-
 **Tested With** => .pdf, .txt, .docx, .doc, .png, .jpeg
+
+**CAUTION**: Make sure to use different filenames, otherwise your file will be overwritten!
 
 ![Imgur](http://i.imgur.com/0bJi1Ds.png)
 
