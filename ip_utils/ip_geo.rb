@@ -5,24 +5,24 @@ require 'rest-client'
 require 'json'
 
 def ip_location
-  puts ''
+  puts
   print 'IP => '
   ip = gets.chomp
 
   if ip == 'quit' || ip == 'exit'
-    puts ''
-    exit(0)
+    puts
+    exit(1)
   else
-    
+
     begin
       url = "http://ip-api.com/json/#{ip}"
       response = RestClient.get(url)
       info = JSON.parse(response)
     rescue
-      puts ''
+      puts
       puts 'IP not found.'
-      puts ''
-      exit(0)
+      puts
+      exit(1)
     end
 
     ip = info['query']
@@ -33,12 +33,12 @@ def ip_location
     zip = info['zip']
 
     if city.nil?
-      puts ''
+      puts
       puts 'IP not found.'
-      puts ''
-      exit(0)
+      puts
+      exit(1)
     else
-      puts ''
+      puts
       puts '============================='
       puts "| IP: #{ip}"
       puts "| City: #{city}"
@@ -47,7 +47,7 @@ def ip_location
       puts "| ZIP: #{zip}"
       puts "| ISP: #{isp}"
       puts '============================='
-      puts ''
+      puts
     end
   end
 end

@@ -12,7 +12,7 @@ def network_info
     response = RestClient.get(url)
   rescue
     puts "Can't find WAN"
-    exit(0)
+    exit(1)
   end
 
   # Grabs assigned IP and formats it.
@@ -21,7 +21,7 @@ def network_info
     lan = ip.ip_address
   rescue
     puts "Cant find LAN"
-    exit(0)
+    exit(1)
   end
 
   # Greps scutil for DNS server.
@@ -29,7 +29,7 @@ def network_info
     dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
   rescue
     puts "Can't find DNS"
-    exit(0)
+    exit(1)
   end
 
   # Greps netstat for router address.
@@ -37,17 +37,17 @@ def network_info
     router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
   rescue
     puts "Can't find Router"
-    exit(0)
+    exit(1)
   end
 
-  puts ""
+  puts
   puts "======================"
   puts "| WAN: #{response}"
   puts "| LAN: #{lan}"
   puts "| ROUTER: #{router}"
   puts "| DNS: #{dns}"
   puts "======================"
-  puts ""
+  puts
 end
 
 network_info

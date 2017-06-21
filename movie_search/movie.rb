@@ -13,14 +13,14 @@ def movie
   # This is a live API key, don't absue it
   api_key = '946f500a'
 
-  puts ''
+  puts
   print 'Movie =>  '
   movie_name = gets.chomp
 
   # Program escape statements
   if movie_name == 'quit' || movie_name == 'exit'
-    puts ''
-    exit(0)
+    puts
+    exit(1)
   else
     url = "http://www.omdbapi.com/?t=#{movie_name}&apikey=#{api_key}"
     response = RestClient.get(url)
@@ -29,10 +29,10 @@ def movie
 
   # Exception for invalid response
   if info['Response'] == 'False'
-    puts ''
+    puts
     puts 'No Movie Found'
-    puts ''
-    exit(0)
+    puts
+    exit(1)
   else
     # Rescue if no tomato score
     # Word wrap added to plot and actors
@@ -51,7 +51,7 @@ def movie
     plot_unformatted = info['Plot']
     plot = wrap(plot_unformatted, 48)
 
-    puts ''
+    puts
     puts '=================================================='
     puts "| Title: #{title}"
     puts "| Year: #{year}"
@@ -62,7 +62,7 @@ def movie
     puts "| Actors: #{actors}"
     puts "| Plot: #{plot}"
     puts '=================================================='
-    puts ''
+    puts
   end
 end
 

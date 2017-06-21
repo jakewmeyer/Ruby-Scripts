@@ -5,12 +5,12 @@ require 'rest-client'
 require 'json'
 
 def stock_search
-  puts ''
+  puts
   print 'Stock => '
   symbol = gets.chomp
 
   if symbol == 'quit' || symbol == 'exit'
-    exit(0)
+    exit(1)
   else
     begin
       # Takes user input and generates ticker symbol.
@@ -19,10 +19,10 @@ def stock_search
       parsed = JSON.parse(response)
       parsed_symbol = parsed['ResultSet']['Result'][0]['symbol']
     rescue
-      puts ''
+      puts
       puts 'Invalid Search'
-      puts ''
-      exit(0)
+      puts
+      exit(1)
     end
 
     # Rest API to fetch current JSON data.
@@ -32,10 +32,10 @@ def stock_search
 
     # Check API response validity.
     if parsed['Realtime Global Securities Quote'].empty?
-      puts ''
+      puts
       puts 'No Stock Found'
-      puts ''
-      exit(0)
+      puts
+      exit(1)
     else
       # Assign variables to hash key values.
       parsed_symbol = parsed['Realtime Global Securities Quote']['01. Symbol']
@@ -48,7 +48,7 @@ def stock_search
       parsed_exchange = parsed['Realtime Global Securities Quote']['02. Exchange Name']
 
       # Output of parsed hash.
-      puts ''
+      puts
       puts '======================'
       puts "| Symbol: #{parsed_symbol}"
       puts "| Price: $#{parsed_price}"
@@ -59,7 +59,7 @@ def stock_search
       puts "| Volume: #{parsed_volume}"
       puts "| Echange: #{parsed_exchange}"
       puts '======================'
-      puts ''
+      puts
     end
   end
 end

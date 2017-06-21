@@ -12,7 +12,7 @@ require 'monetize'
 
 def conversion
   # User input
-  puts ''
+  puts
   print "Base => "
   base_currency = gets.chomp.upcase
   print "Amount => "
@@ -27,10 +27,10 @@ def conversion
     parsed = JSON.parse(response)
     convert_factor = (parsed['rates'][convert_to])
   rescue
-    puts ''
+    puts
     puts 'No exchange rate found'
-    puts ''
-    exit(0)
+    puts
+    exit(1)
   end
 
   # Fixes locale exception bug
@@ -42,14 +42,14 @@ def conversion
   final_convert = initial.exchange_to(convert_to)
 
   # Output formatting
-  puts ''
+  puts
   puts '================'
   puts "| #{base_currency} to #{convert_to}"
   puts "| RATE: #{convert_factor}"
   puts "| #{base_currency}: #{initial.format}"
   puts "| #{convert_to}: #{final_convert.format}"
   puts '================'
-  puts ''
+  puts
 end
 
 conversion

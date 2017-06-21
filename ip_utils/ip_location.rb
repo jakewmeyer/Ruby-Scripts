@@ -10,10 +10,10 @@ def ip_current_geo
     response = RestClient.get(url)
     info = JSON.parse(response)
   rescue
-    puts ''
+    puts
     puts 'No IP found.'
-    puts ''
-    exit(0)
+    puts
+    exit(1)
   end
 
   ip = info["query"]
@@ -24,12 +24,12 @@ def ip_current_geo
   zip = info['zip']
 
   if city.nil?
-    puts ''
+    puts
     puts 'No IP found.'
-    puts ''
-    exit(0)
+    puts
+    exit(1)
   else
-    puts ''
+    puts
     puts '============================='
     puts "| IP: #{ip}"
     puts "| City: #{city}"
@@ -38,7 +38,7 @@ def ip_current_geo
     puts "| ZIP: #{zip}"
     puts "| ISP: #{isp}"
     puts '============================='
-    puts ''
+    puts
   end
 end
 

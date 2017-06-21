@@ -16,7 +16,7 @@ def weather_search
     location = parsed["city"]
     rescue
         puts "No IP Response"
-        exit(0)
+        exit(1)
     end
 
     # Uses city to fetch weather
@@ -34,10 +34,10 @@ def weather_search
     visability = parsed["current"]["vis_miles"]
     rescue
         puts "No Weather API Response"
-        exit(0)
+        exit(1)
     end
 
-    puts ""
+    puts
     puts "======================"
     puts "| City: #{location_name}"
     puts "| Temp: #{temp}°"
@@ -46,7 +46,7 @@ def weather_search
     puts "| Wind Speed: #{wind_speed} mph"
     puts "| Visability: #{visability} mi"
     puts "======================"
-    puts ""
+    puts
 end
 
 weather_search
