@@ -20,15 +20,11 @@
 <br></br>
 
 ## Install / Setup
-Installs necessary gems and downloads the files as master.zip
-```bash
-curl -sSL https://git.io/vHp98 | sh
-```
-```bash
-ruby stocks.rb
+Install the scripts easily as a ruby gem
+```ruby
+gem install jake-scripts
 ```
 
-I've also included a folder "bin" with the same programs configured as scripts, with the .rb removed, and execute privileges given. By adding these programs to a bin folder in your PATH, you can run the commands like shown in the screenshots.
 ## Gems Used
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby library for accurate currency management
