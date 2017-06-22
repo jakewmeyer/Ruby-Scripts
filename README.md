@@ -65,6 +65,7 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 
 ## IP List - Returns network information
 * IP List now has dual LAN support
+
 ![Imgur](http://i.imgur.com/pcyIjKN.png)
 
 ## IP Location - Returns info about current WAN IP
