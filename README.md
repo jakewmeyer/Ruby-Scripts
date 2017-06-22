@@ -8,6 +8,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/501aa5aee5854d34831a685fae05314d)](https://www.codacy.com/app/jakewmeyer/Ruby-Scripts?utm_source=github.com&utm_medium=referral&utm_content=jakewmeyer/Ruby-Scripts&utm_campaign=badger)
 [![GitHub release](https://img.shields.io/github/release/jakewmeyer/Ruby-Scripts.svg)]()
+[![Gem](https://img.shields.io/gem/dt/jake-scripts.svg)]()
 [![Language](https://img.shields.io/badge/language-Ruby-red.svg)]()
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 [![Platform](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
@@ -20,7 +21,7 @@
 <br></br>
 
 ## Install / Setup
-Install the scripts easily as a ruby gem
+Install the scripts easily as a [ruby gem](https://rubygems.org/gems/jake-scripts)
 ```ruby
 gem install jake-scripts
 ```
