@@ -17,8 +17,14 @@ def network_info
 
   # Grabs assigned IP and formats it.
   begin
-    ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
-    lan = ip.ip_address
+    lan_array = Socket.ip_address_list.select{|intf| intf.ipv4_private?}
+    lan1 = lan_array[0].ip_address
+    lan2 = lan_array[1]
+
+    if lan2.nil?
+    else
+      lan2 = lan2 = lan_array[1].ip_address
+    end
   rescue
     puts "Cant find LAN"
     exit(1)
@@ -40,14 +46,26 @@ def network_info
     exit(1)
   end
 
-  puts
-  puts "======================"
-  puts "| WAN: #{response}"
-  puts "| LAN: #{lan}"
-  puts "| ROUTER: #{router}"
-  puts "| DNS: #{dns}"
-  puts "======================"
-  puts
+  if lan2.nil?
+    puts
+    puts "======================"
+    puts "| WAN: #{response}"
+    puts "| LAN: #{lan1}"
+    puts "| ROUTER: #{router}"
+    puts "| DNS: #{dns}"
+    puts "======================"
+    puts
+  else
+    puts
+    puts "======================"
+    puts "| WAN: #{response}"
+    puts "| LAN 1: #{lan1}"
+    puts "| LAN 2: #{lan2}"
+    puts "| ROUTER: #{router}"
+    puts "| DNS: #{dns}"
+    puts "======================"
+    puts
+  end
 end
 
 network_info
