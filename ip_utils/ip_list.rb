@@ -4,6 +4,7 @@
 
 require 'rest-client'
 require 'socket'
+require 'os'
 
 def network_info
   # Grabs public WAN address.
@@ -23,29 +24,43 @@ def network_info
     exit(1)
   end
 
-  # Greps scutil for DNS server.
+  # Greps either scutil or resolv.conf for DNS server.
   begin
-    dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
+    if OS.linux?
+      dns = %x[cat /etc/resolv.conf | grep nameserver | head -1 | awk '{print$2}']
+    elsif OS.mac?
+      dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
+    else
+      puts "OS not supported!"
+      exit(1)
+    end
   rescue
     puts "Can't find DNS"
     exit(1)
   end
 
-  # Greps netstat for router address.
+  # Greps netstat or ip route for router address.
   begin
-    router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
+    if OS.linux?
+      router = %x[ip route | grep default | head -1 | awk '{print$3}']
+    elsif OS.mac?
+      router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
+    else
+      puts "OS not supported!"
+      exit(1)
+    end
   rescue
     puts "Can't find Router"
     exit(1)
   end
 
   puts
-  puts "======================"
+  puts "======================="
   puts "| WAN: #{response}"
   puts "| LAN(s): #{lans.join(', ')}"
   puts "| ROUTER: #{router}"
   puts "| DNS: #{dns}"
-  puts "======================"
+  puts "======================="
   puts
 end
 
