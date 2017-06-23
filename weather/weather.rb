@@ -5,48 +5,68 @@ require 'rest-client'
 require 'json'
 
 def weather_search
-    # This key is functional, please don't abuse it
-    api_key = "6510b92495fd472ca30155709172803&q"
+  # This key is functional, please don't abuse it
+  api_key = "6510b92495fd472ca30155709172803&q"
 
-    # Uses IP to get current city
-    begin
+  # Uses IP to get current city
+  begin
     url = "http://ip-api.com/json"
     response = RestClient.get(url)
     parsed = JSON.parse(response)
     location = parsed["city"]
-    rescue
-        puts "No IP Response"
-        exit(1)
-    end
+  rescue
+    puts "No IP Address"
+    exit(1)
+  end
 
-    # Uses city to fetch weather
-    begin
+  # Uses city to fetch weather
     url = "https://api.apixu.com/v1/current.json?key=#{api_key}=#{location}"
     response = RestClient.get(url)
     parsed = JSON.parse(response)
 
-    # Assigning values to variables
-    location_name = parsed["location"]["name"]
-    temp = parsed["current"]["temp_f"]
-    wind_speed = parsed["current"]["wind_mph"]
-    humidity = parsed["current"]["humidity"]
-    feels_like = parsed["current"]["feelslike_f"]
-    visability = parsed["current"]["vis_miles"]
-    rescue
-        puts "No Weather API Response"
-        exit(1)
-    end
+    country = parsed["location"]["country"]
 
-    puts
-    puts "======================"
-    puts "| City: #{location_name}"
-    puts "| Temp: #{temp}°"
-    puts "| Feels Like: #{feels_like}°"
-    puts "| Humidity: #{humidity}%"
-    puts "| Wind Speed: #{wind_speed} mph"
-    puts "| Visability: #{visability} mi"
-    puts "======================"
-    puts
+    if country == "United States of America"
+      # Assigning values to variables
+      location_name = parsed["location"]["name"]
+      temp = parsed["current"]["temp_f"]
+      wind_speed = parsed["current"]["wind_mph"]
+      humidity = parsed["current"]["humidity"]
+      feels_like = parsed["current"]["feelslike_f"]
+      visability = parsed["current"]["vis_miles"]
+
+      # Output for United States
+      puts
+      puts "======================"
+      puts "| City: #{location_name}"
+      puts "| Temp: #{temp}°F"
+      puts "| Feels Like: #{feels_like}°F"
+      puts "| Humidity: #{humidity}%"
+      puts "| Wind Speed: #{wind_speed} mph"
+      puts "| Visability: #{visability} mi"
+      puts "======================"
+      puts
+    else
+      # Assigning values to variables
+      location_name = parsed["location"]["name"]
+      temp = parsed["current"]["temp_c"]
+      wind_speed = parsed["current"]["wind_kph"]
+      humidity = parsed["current"]["humidity"]
+      feels_like = parsed["current"]["feelslike_c"]
+      visability = parsed["current"]["vis_km"]
+
+      # Output for Metric countries
+      puts
+      puts "======================"
+      puts "| City: #{location_name}"
+      puts "| Temp: #{temp}°C"
+      puts "| Feels Like: #{feels_like}°C"
+      puts "| Humidity: #{humidity}%"
+      puts "| Wind Speed: #{wind_speed} kph"
+      puts "| Visability: #{visability} km"
+      puts "======================"
+      puts
+    end
 end
 
 weather_search
