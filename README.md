@@ -64,8 +64,9 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
 ## IP List - Returns network information
-* IP List now has dual LAN support
-* IP list is now called ip_list to avoid conflict on Linux
+* Now has multiple LAN support
+* Now called **ip_list** to avoid conflict on Linux
+* Added DNS and Router IP support for Linux
 
 ![Imgur](http://i.imgur.com/v0PApJi.png)
 
