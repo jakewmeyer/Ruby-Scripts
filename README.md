@@ -37,7 +37,7 @@ export APIXU_API_KEY=key
 * [Monetize](https://github.com/RubyMoney/monetize) - Ruby library for money object creation
 
 ## Netgeo - IP network utility
-CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true |:+1|
+CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
 
 ![Imgur](http://i.imgur.com/zA2aTPS.png)
 
