@@ -11,7 +11,7 @@ end
 
 def movie
   # This is a live API key, don't absue it
-  api_key = '946f500a'
+  api_key = ENV['OMDBAPI_API_KEY'] || '946f500a'
 
   puts
   print 'Movie =>  '
