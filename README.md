@@ -26,7 +26,7 @@ Install the scripts easily as a [ruby gem](https://rubygems.org/gems/jake-script
 gem install jake-scripts
 ```
 ## API Keys
-Users now the options to set their own API keys through environment variables
+Users now the options to set their own API keys through environment variables thanks to @sethkrasnianski
 ```bash
 export OMDBAPI_API_KEY=key
 export APIXU_API_KEY=key
