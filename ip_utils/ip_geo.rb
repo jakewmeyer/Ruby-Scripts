@@ -87,6 +87,30 @@ elsif opt != nil && arg != nil
       puts 'Bad input'
     end
   end
+elsif opt != nil && arg == nil
+  url = "http://ip-api.com/json/#{arg.join}"
+  response = RestClient.get(url)
+  info = JSON.parse(response)
+
+  if info['status'] == 'fail'
+    puts 'No IP info'
+  else
+    if opt == 'ip'
+      puts info['query']
+    elsif opt == 'city'
+      puts info['city']
+    elsif opt == 'region'
+      puts info['region']
+    elsif opt == 'country'
+      puts info['country']
+    elsif opt == 'zip'
+      puts info['zip']
+    elsif opt == 'isp'
+      puts info['isp']
+    else
+      puts 'Bad input'
+    end
+  end
 else
   puts 'Bad input'
 end
