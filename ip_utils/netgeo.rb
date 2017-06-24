@@ -16,7 +16,7 @@ require 'socket'
 
 def netutil
   opts = Slop.parse do |o|
-    o.banner = 'Usage: netgeo [flag] [option]'
+    o.banner = 'Usage: netgeo [flag]'
 
     # Gets WAN address
     o.on '-w', '--wan', 'Returns WAN IP' do
@@ -26,7 +26,7 @@ def netutil
     end
 
     # Gets LAN(s)
-    o.on '-l', '--lan', 'Returns LAN(s) IP(s)' do
+    o.on '-l', '--lan', 'Returns LAN IP(s)' do
       lans = Socket.ip_address_list.select{|intf| intf.ipv4_private?}.map { |intf| intf.ip_address }
       puts lans.join(', ')
     end
@@ -73,7 +73,7 @@ def netutil
     o.separator '[all] [ip] [city] [region] [country] [zip] [isp]'
     o.separator 'Example: netgeo -s ip,city,isp 8.8.8.8'
     o.array '-s', '[options] [ip address]', 'Specific Geodata'
-    o.on '-h', '--help', 'version 1.0.0' do
+    o.on '-h', '--help', 'version 1.0.2' do
       puts o
       exit
     end
