@@ -13,7 +13,7 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 [![Platform](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
 
-### Stock Search / File Encryptor / Currency Converter / Weather Search / Movie Search / IP Geolocation / IP List
+### Network Utils / Stock Search / File Encryptor / Currency Converter / Weather Search / Movie Search
 
 
 
@@ -35,6 +35,11 @@ export APIXU_API_KEY=key
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby library for accurate currency management
 * [Monetize](https://github.com/RubyMoney/monetize) - Ruby library for money object creation
+
+## Netgeo - IP network utility
+CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true |:+1|
+
+![Imgur](http://i.imgur.com/zA2aTPS.png)
 
 ## Stock Search - Returns current stock information
 ![Imgur](http://i.imgur.com/LpIFAdf.png)
