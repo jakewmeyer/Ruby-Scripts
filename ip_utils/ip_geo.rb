@@ -3,53 +3,86 @@
 
 require 'rest-client'
 require 'json'
+require 'optparse'
 
-def ip_location
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: example.rb [options]"
+
+  opts.on("-m", "--machine VARIABLE", "Machine Readable") do |v|
+    options[:var] = v
+  end
+end.parse!
+
+# Ex. ip
+opt = options[:var]
+
+# Ex. 8.8.8.8
+*arg = ARGV
+
+if opt == nil && arg == nil
   puts
   print 'IP => '
   ip = gets.chomp
 
-  if ip == 'quit' || ip == 'exit'
-    puts
-    exit(1)
+  url = "http://ip-api.com/json/#{ip}"
+  response = RestClient.get(url)
+  info = JSON.parse(response)
+
+  if info['status'] == 'fail'
+    puts 'No IP found'
   else
-
-    begin
-      url = "http://ip-api.com/json/#{ip}"
-      response = RestClient.get(url)
-      info = JSON.parse(response)
-    rescue
-      puts
-      puts 'IP not found.'
-      puts
-      exit(1)
-    end
-
-    ip = info['query']
-    city = info['city']
-    region = info['region']
-    country = info['country']
-    isp = info['isp']
-    zip = info['zip']
-
-    if city.nil?
-      puts
-      puts 'IP not found.'
-      puts
-      exit(1)
-    else
-      puts
-      puts '============================='
-      puts "| IP: #{ip}"
-      puts "| City: #{city}"
-      puts "| Region: #{region}"
-      puts "| Country: #{country}"
-      puts "| ZIP: #{zip}"
-      puts "| ISP: #{isp}"
-      puts '============================='
-      puts
-    end
+    puts
+    puts '============================='
+    puts "| IP: #{info['query']}"
+    puts "| City: #{info['city']}"
+    puts "| Region: #{info['region']}"
+    puts "| Country: #{info['country']}"
+    puts "| ZIP: #{info['zip']}"
+    puts "| ISP: #{info['isp']}"
+    puts '============================='
+    puts
   end
-end
+elsif opt == nil && arg != nil
+  url = "http://ip-api.com/json/#{arg.join}"
+  response = RestClient.get(url)
+  info = JSON.parse(response)
 
-ip_location
+  if info['status'] == 'fail'
+    puts 'No IP found'
+  else
+    puts
+    puts '============================='
+    puts "| IP: #{info['query']}"
+    puts "| City: #{info['city']}"
+    puts "| Region: #{info['region']}"
+    puts "| Country: #{info['country']}"
+    puts "| ZIP: #{info['zip']}"
+    puts "| ISP: #{info['isp']}"
+    puts '============================='
+    puts
+  end
+elsif opt != nil && arg != nil
+  url = "http://ip-api.com/json/#{arg.join}"
+  response = RestClient.get(url)
+  info = JSON.parse(response)
+
+  if opt == 'ip'
+    puts info['query']
+  elsif opt == 'city'
+    puts info['city']
+  elsif opt == 'region'
+    puts info['region']
+  elsif opt == 'country'
+    puts info['country']
+  elsif opt == 'zip'
+    puts info['zip']
+  elsif opt == 'isp'
+    puts info['isp']
+  else
+    puts 'Bad input'
+  end
+else
+  puts 'Bad input'
+end
