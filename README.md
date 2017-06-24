@@ -76,6 +76,18 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 ## IP Geolocation - Returns geo info on a specified IP address
 ![Imgur](http://i.imgur.com/jgeOAFi.png)
 
+**New Features**
+* Now the ip prompt can be skipped with an argument, and passing a **-m** flag and an argument like **isp** returns machine readable output for easy piping into other shell scripts. Other arguments include [ ip, city, region, country, zip, isp ]
+```bash
+ip_geo 8.8.8.8
+```
+```bash
+ip_geo -m isp
+```
+```bash
+ip_geo -m isp 8.8.8.8
+```
+
 ## Movie Search - Uses OMDB API to return movie data
 Uses the [OMBDB](http://www.omdbapi.com/) API.
 
