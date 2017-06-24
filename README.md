@@ -26,10 +26,10 @@ Install the scripts easily as a [ruby gem](https://rubygems.org/gems/jake-script
 gem install jake-scripts
 ```
 ## API Keys
-* Users now the options to set their own API keys through environment variables
+Users now the options to set their own API keys through environment variables
 ```bash
-export OMDBAPI_API_KEY=key_goes_here
-export APIXU_API_KEY=key_goes_here
+export OMDBAPI_API_KEY=key
+export APIXU_API_KEY=key
 ```
 ## Gems Used
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
