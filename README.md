@@ -73,6 +73,11 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
+## Movie Search - Uses OMDB API to return movie data
+Uses the [OMBDB](http://www.omdbapi.com/) API.
+
+![Imgur](http://i.imgur.com/Gj4AjmZ.png)
+
 ## IP List - Returns network information
 * Now has multiple LAN support
 * Now called **ip_list** to avoid conflict on Linux
@@ -97,11 +102,6 @@ ip_geo -m isp
 ```bash
 ip_geo -m isp 8.8.8.8
 ```
-
-## Movie Search - Uses OMDB API to return movie data
-Uses the [OMBDB](http://www.omdbapi.com/) API.
-
-![Imgur](http://i.imgur.com/Gj4AjmZ.png)
 
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
