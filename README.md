@@ -77,7 +77,7 @@ Uses the [APIXU](https://www.apixu.com/) weather api.
 ![Imgur](http://i.imgur.com/jgeOAFi.png)
 
 **New Features**
-* Now the ip prompt can be skipped with an argument, and passing a **-m** flag and an argument like **isp** returns machine readable output for easy piping into other shell scripts. Other arguments include [ ip, city, region, country, zip, isp ]
+* Now the **IP** prompt can be skipped with an argument, and passing a **-m** flag and an argument like **isp** returns machine readable output for easy piping into other shell scripts. Other arguments include [ ip, city, region, country, zip, isp ]
 ```bash
 ip_geo 8.8.8.8
 ```
