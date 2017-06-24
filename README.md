@@ -33,8 +33,10 @@ export APIXU_API_KEY=key
 ```
 ## Gems Used
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
-* [Ruby Money](https://github.com/RubyMoney/money) - Ruby library for accurate currency management
-* [Monetize](https://github.com/RubyMoney/monetize) - Ruby library for money object creation
+* [Ruby Money](https://github.com/RubyMoney/money) - Ruby gem for accurate currency management
+* [Monetize](https://github.com/RubyMoney/monetize) - Ruby gem for money object creation
+* [Slop](https://github.com/leejarvis/slop) - Ruby CLI option parsing framework
+* [OS](https://github.com/rdp/os) - Ruby gem for easy operating system identification
 
 ## Netgeo - IP network utility
 CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
