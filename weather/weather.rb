@@ -6,7 +6,7 @@ require 'json'
 
 def weather_search
   # This key is functional, please don't abuse it
-  api_key = "6510b92495fd472ca30155709172803&q"
+  api_key = ENV['APIXU_API_KEY'] || "6510b92495fd472ca30155709172803&q"
 
   # Uses IP to get current city
   begin
