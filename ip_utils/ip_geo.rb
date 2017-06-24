@@ -68,20 +68,24 @@ elsif opt != nil && arg != nil
   response = RestClient.get(url)
   info = JSON.parse(response)
 
-  if opt == 'ip'
-    puts info['query']
-  elsif opt == 'city'
-    puts info['city']
-  elsif opt == 'region'
-    puts info['region']
-  elsif opt == 'country'
-    puts info['country']
-  elsif opt == 'zip'
-    puts info['zip']
-  elsif opt == 'isp'
-    puts info['isp']
+  if info['status'] == 'fail'
+    puts 'No IP info'
   else
-    puts 'Bad input'
+    if opt == 'ip'
+      puts info['query']
+    elsif opt == 'city'
+      puts info['city']
+    elsif opt == 'region'
+      puts info['region']
+    elsif opt == 'country'
+      puts info['country']
+    elsif opt == 'zip'
+      puts info['zip']
+    elsif opt == 'isp'
+      puts info['isp']
+    else
+      puts 'Bad input'
+    end
   end
 else
   puts 'Bad input'
