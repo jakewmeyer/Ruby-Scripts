@@ -81,7 +81,7 @@ Uses the [OMBDB](http://www.omdbapi.com/) API.
 
 ## IP List - Returns network information
 * Now has multiple LAN support
-* Now called **ip_list** to avoid conflict on Linux
+* Now called **ip-list** to avoid conflict on Linux
 * Added DNS and Router IP support for Linux
 
 ![Imgur](http://i.imgur.com/v0PApJi.png)
