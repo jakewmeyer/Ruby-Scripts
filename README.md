@@ -83,7 +83,11 @@ combines the functionality of all three into a single, easier to use script. The
 but have singular functionality. I'll continue to keep them in the repo for those who like the formatted output,
 but I recommend using the new version, instead of the deprecated ones.
 
-![Imgur](http://i.imgur.com/v0PApJi.png)![Imgur](http://i.imgur.com/Wtbrt8R.png)![Imgur](http://i.imgur.com/jgeOAFi.png)
+![Imgur](http://i.imgur.com/v0PApJi.png)
+
+![Imgur](http://i.imgur.com/Wtbrt8R.png)
+
+![Imgur](http://i.imgur.com/jgeOAFi.png)
 
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
