@@ -91,18 +91,6 @@ but I recommend using the new version, instead of the deprecated ones.
 
 ![Imgur](http://i.imgur.com/jgeOAFi.png)
 
-**New Features**
-* Now the **IP** prompt can be skipped with an argument, and passing a **-m** flag and an argument like **isp** returns machine readable output for easy piping into other shell scripts. Other arguments include [ ip, city, region, country, zip, isp ]
-```bash
-ip_geo 8.8.8.8
-```
-```bash
-ip_geo -m isp
-```
-```bash
-ip_geo -m isp 8.8.8.8
-```
-
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
 * All Programs are fully functional, with live API keys baked in.
