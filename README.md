@@ -41,9 +41,9 @@ CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on 
 ```bash
 netgeo -s ip,city,region 12.34.56.78
 
-#=> 12.34.56.78
-    Huntington
-    WV
+=> 12.34.56.78
+   Huntington
+   WV
 ```
 
 ![Imgur](http://i.imgur.com/NnMOLCC.png)
