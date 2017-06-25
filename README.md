@@ -79,17 +79,16 @@ Uses the [OMBDB](http://www.omdbapi.com/) API.
 
 ![Imgur](http://i.imgur.com/Gj4AjmZ.png)
 
-## IP List - Returns network information
-* Now has multiple LAN support
-* Now called **ip-list** to avoid conflict on Linux
-* Added DNS and Router IP support for Linux
+## IP Tools - Old Versions
+* **NOTE:** The three scripts below have been replaced by the ```netgeo``` script, which
+combines the functionality of all three into a single, easier to use script. These have nice formatting,
+but have singular functionality. I'll continue to keep them in the repo for those who like the formatted output,
+but I recommend using the new version, instead of the deprecated ones.
 
 ![Imgur](http://i.imgur.com/v0PApJi.png)
 
-## IP Location - Returns info about current WAN IP
 ![Imgur](http://i.imgur.com/Wtbrt8R.png)
 
-## IP Geolocation - Returns geo info on a specified IP address
 ![Imgur](http://i.imgur.com/jgeOAFi.png)
 
 **New Features**
