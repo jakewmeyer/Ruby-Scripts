@@ -38,6 +38,11 @@ export APIXU_API_KEY=key
 ## Netgeo - IP network utility
 CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
 
+Netgeo is available as a separate gem [here](https://rubygems.org/gems/netgeo)
+```bash
+gem install netgeo
+```
+
 **NOTE:** If no IP is specified, your current public IP is used
 ```bash
 => netgeo -s ip,city,region 12.34.56.78
