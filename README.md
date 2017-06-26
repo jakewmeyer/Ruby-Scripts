@@ -94,7 +94,7 @@ Uses the [OMBDB](http://www.omdbapi.com/) API.
 ## IP Tools - Old Versions
 * **NOTE:** The three scripts below have been replaced by the ```netgeo``` script, which
 combines the functionality of all three into a single, easier to use script. These have nice formatting,
-but have singular functionality. I'll continue to keep them in the repo for those who like the formatted output,
+but singular functionality. I'll continue to keep them in the repo for those who like the formatted output,
 but I recommend using the new version, instead of the deprecated ones.
 
 ![Imgur](http://i.imgur.com/B17b58W.png)
