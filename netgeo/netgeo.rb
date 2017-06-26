@@ -14,8 +14,9 @@ require 'os'
 require 'socket'
 
 
-def netutil
-  opts = Slop.parse do |o|
+# Contains option parsing logic
+def netgeo
+  opts = Slop.parse suppress_errors: true do |o|
     o.banner = 'Usage: netgeo [flag]'
 
     # Gets WAN address
@@ -57,6 +58,9 @@ def netutil
       puts dns
     end
 
+    o.string '-m', '--mac [interface]', 'Returns MAC address for interface. Ex. eth0'
+
+
     o.on '-g', '--geo', 'Returns Current IP Geodata' do
       url = "http://ip-api.com/json/"
       response = RestClient.get(url)
@@ -79,6 +83,8 @@ def netutil
     end
   end
 
+
+  # Logic for specific geodata
   options = opts[:s]
   ip = opts.arguments || ''
 
@@ -100,6 +106,13 @@ def netutil
     puts info['zip'] if options.include? 'zip'
     puts info['isp'] if options.include? 'isp'
   end
+
+
+  # Logic for specific MAC address
+  options = opts[:m]
+  unless options == nil
+  puts %x[ifconfig #{options} | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}']
+  end
 end
 
-netutil
+netgeo
