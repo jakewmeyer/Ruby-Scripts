@@ -12,7 +12,7 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 [![Platform](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
 
-### Network Utils / Stock Search / File Encryptor / Currency Converter / Weather Search / Movie Search
+### Network Tools / Stock Finder / File Encryptor / Currency Converter / Weather / Movie Search
 
 </div>
 <br></br>
