@@ -47,7 +47,7 @@ CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on 
    WV
 ```
 
-![Imgur](http://i.imgur.com/NnMOLCC.png)
+![Imgur](http://i.imgur.com/6welzqe.png)
 
 ## Stock Search - Returns current stock information
 ![Imgur](http://i.imgur.com/LpIFAdf.png)
