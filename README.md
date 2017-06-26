@@ -18,7 +18,7 @@
 <br></br>
 
 ## Install / Setup
-Install the scripts easily as a [ruby gem](https://rubygems.org/gems/jake-scripts)
+Install all the scripts easily as a [ruby gem](https://rubygems.org/gems/jake-scripts)
 ```ruby
 gem install jake-scripts
 ```
