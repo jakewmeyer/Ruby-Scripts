@@ -22,23 +22,18 @@ Install the scripts easily as a [ruby gem](https://rubygems.org/gems/jake-script
 ```ruby
 gem install jake-scripts
 ```
-## API Keys
-Users now have the option to set their own API keys through environment variables thanks to [sethkrasnianski](https://github.com/sethkrasnianski)
-```bash
-export OMDBAPI_API_KEY=key
-export APIXU_API_KEY=key
-```
+
 ## Gems Used
 * [Rest-Client](https://github.com/rest-client/rest-client) - Client for making HTTP requests in ruby
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby gem for accurate currency management
 * [Monetize](https://github.com/RubyMoney/monetize) - Ruby gem for money object creation
 * [Slop](https://github.com/leejarvis/slop) - Ruby CLI option parsing framework
-* [OS](https://github.com/rdp/os) - Ruby gem for easy operating system identification
+* [OS](https://github.com/rdp/os) - Ruby gem for operating system identification
 
 ## Netgeo - IP network utility
 CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
 
-Netgeo is available as a separate gem [here](https://rubygems.org/gems/netgeo)
+Netgeo is also available as a separate gem [here](https://rubygems.org/gems/netgeo)
 ```ruby
 gem install netgeo
 ```
@@ -102,6 +97,13 @@ but I recommend using the new version, instead of the deprecated ones.
 ![Imgur](http://i.imgur.com/UpJn4LJ.png)
 
 ![Imgur](http://i.imgur.com/uCl7nXu.png)
+
+## API Keys
+Users now have the option to set their own API keys through environment variables thanks to [sethkrasnianski](https://github.com/sethkrasnianski)
+```bash
+export OMDBAPI_API_KEY=key
+export APIXU_API_KEY=key
+```
 
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
