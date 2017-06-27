@@ -6,13 +6,11 @@
 # to make all your piping dreams come true.
 #
 
-
 require 'slop'
 require 'rest-client'
 require 'json'
 require 'os'
 require 'socket'
-
 
 # Contains option parsing logic
 def netgeo
@@ -21,25 +19,25 @@ def netgeo
 
     # Gets WAN address
     o.on '-w', '--wan', 'Returns WAN IP' do
-      url = "https://api.ipify.org"
+      url = 'https://api.ipify.org'
       response = RestClient.get(url)
       puts response
     end
 
     # Gets LAN(s)
     o.on '-l', '--lan', 'Returns LAN IP(s)' do
-      lans = Socket.ip_address_list.select{|intf| intf.ipv4_private?}.map { |intf| intf.ip_address }
+      lans = Socket.ip_address_list.select(&:ipv4_private?).map(&:ip_address)
       puts lans.join(', ')
     end
 
     # Gets Router IP
     o.on '-r', '--router', 'Returns Router IP' do
       if OS.linux?
-        router = %x[ip route | grep default | head -1 | awk '{print$3}']
+        router = `ip route | grep default | head -1 | awk '{print$3}'`
       elsif OS.mac?
-        router = %x[netstat -rn | grep default | head -1 | awk '{print$2}']
+        router = `netstat -rn | grep default | head -1 | awk '{print$2}'`
       else
-        puts "OS not supported!"
+        puts 'OS not supported!'
         exit(1)
       end
       puts router
@@ -48,11 +46,11 @@ def netgeo
     # Gets DNS nameserver
     o.on '-d', '--dns', 'Returns DNS Nameserver' do
       if OS.linux?
-        dns = %x[cat /etc/resolv.conf | grep nameserver | head -1 | awk '{print$2}']
+        dns = `cat /etc/resolv.conf | grep nameserver | head -1 | awk '{print$2}'`
       elsif OS.mac?
-        dns = %x[scutil --dns | grep nameserver | head -1 | awk '{print$3}']
+        dns = `scutil --dns | grep nameserver | head -1 | awk '{print$3}'`
       else
-        puts "OS not supported!"
+        puts 'OS not supported!'
         exit(1)
       end
       puts dns
@@ -60,9 +58,8 @@ def netgeo
 
     o.string '-m', '--mac [interface]', 'Returns MAC address for interface. Ex. eth0'
 
-
     o.on '-g', '--geo', 'Returns Current IP Geodata' do
-      url = "http://ip-api.com/json/"
+      url = 'http://ip-api.com/json/'
       response = RestClient.get(url)
       info = JSON.parse(response)
       puts info['query']
@@ -82,7 +79,6 @@ def netgeo
       exit
     end
   end
-
 
   # Logic for specific geodata
   options = opts[:s]
@@ -107,12 +103,10 @@ def netgeo
     puts info['isp'] if options.include? 'isp'
   end
 
-
   # Logic for specific MAC address
   options = opts[:m]
-  unless options == nil
-  puts %x[ifconfig #{options} | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}']
-  end
+  return if options.nil?
+  puts `ifconfig #{options} | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`
 end
 
 netgeo

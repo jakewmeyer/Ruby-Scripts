@@ -1,0 +1,18 @@
+# Rubocop Configuration
+Metrics/AbcSize:
+  Max: 100
+
+Metrics/BlockLength:
+  Max: 60
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 80
+
+Metrics/PerceivedComplexity:
+  Max: 20
