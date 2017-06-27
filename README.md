@@ -70,7 +70,12 @@ decrypt [encrypted file] [output file]
 ![Imgur](http://i.imgur.com/C3lnqBl.png)
 
 ## Weather Search - Returns current weather information based on IP
-Uses the [APIXU](https://www.apixu.com/) weather api.
+Uses the [APIXU](https://www.apixu.com/) weather api for data based on IP.
+
+Can also have a city passed as an argument to override the IP location.
+```bash
+weather tokyo
+```
 
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 

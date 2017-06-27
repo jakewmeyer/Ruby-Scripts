@@ -13,7 +13,7 @@ def weather_search
     url = "http://ip-api.com/json"
     response = RestClient.get(url)
     parsed = JSON.parse(response)
-    location = parsed["city"]
+    location = ARGV || parsed["city"]
   rescue
     puts "No IP Address"
     exit(1)
@@ -33,7 +33,7 @@ def weather_search
       wind_speed = parsed["current"]["wind_mph"]
       humidity = parsed["current"]["humidity"]
       feels_like = parsed["current"]["feelslike_f"]
-      visability = parsed["current"]["vis_miles"]
+      visibility = parsed["current"]["vis_miles"]
 
       # Output for United States
       puts
@@ -43,7 +43,7 @@ def weather_search
       puts "| Feels Like: #{feels_like}°F"
       puts "| Humidity: #{humidity}%"
       puts "| Wind Speed: #{wind_speed} mph"
-      puts "| Visability: #{visability} mi"
+      puts "| Visibility: #{visibility} mi"
       puts "======================"
       puts
     else
@@ -53,7 +53,7 @@ def weather_search
       wind_speed = parsed["current"]["wind_kph"]
       humidity = parsed["current"]["humidity"]
       feels_like = parsed["current"]["feelslike_c"]
-      visability = parsed["current"]["vis_km"]
+      visibility = parsed["current"]["vis_km"]
 
       # Output for Metric countries
       puts
@@ -63,7 +63,7 @@ def weather_search
       puts "| Feels Like: #{feels_like}°C"
       puts "| Humidity: #{humidity}%"
       puts "| Wind Speed: #{wind_speed} kph"
-      puts "| Visability: #{visability} km"
+      puts "| Visibility: #{visibility} km"
       puts "======================"
       puts
     end
