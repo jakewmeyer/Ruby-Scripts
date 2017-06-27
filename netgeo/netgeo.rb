@@ -19,8 +19,13 @@ def netgeo
 
     # Gets WAN address
     o.on '-w', '--wan', 'Returns WAN IP' do
-      url = 'https://api.ipify.org'
-      response = RestClient.get(url)
+      begin
+        url = 'https://api.ipify.org'
+        response = RestClient.get(url)
+      rescue RestClient::SSLCertificateNotVerified
+        puts 'SSL Error'
+        exit(1)
+      end
       puts response
     end
 
