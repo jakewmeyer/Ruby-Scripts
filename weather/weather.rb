@@ -14,14 +14,19 @@ def weather_search
     response = RestClient.get(url)
     parsed = JSON.parse(response)
     location = ARGV || parsed["city"]
-  rescue
-    puts "No IP Address"
+  rescue RestClient::BadRequest
+    puts "No IP address found"
     exit(1)
   end
 
   # Uses city to fetch weather
-    url = "https://api.apixu.com/v1/current.json?key=#{api_key}=#{location}"
-    response = RestClient.get(url)
+    begin
+      url = "https://api.apixu.com/v1/current.json?key=#{api_key}=#{location}"
+      response = RestClient.get(url)
+    rescue RestClient::BadRequest
+      puts "Location not found"
+      exit(1)
+    end
     parsed = JSON.parse(response)
 
     country = parsed["location"]["country"]
