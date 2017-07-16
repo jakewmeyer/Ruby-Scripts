@@ -80,7 +80,7 @@ weather tokyo
 ![Imgur](http://i.imgur.com/xzfwJF9.png)
 
 ## Movie Search - Uses OMDB API to return movie data
-Uses the [OMBDB](http://www.omdbapi.com/) API.
+Uses the [OMDB](http://www.omdbapi.com/) API.
 
 ![Imgur](http://i.imgur.com/Gj4AjmZ.png)
 
