@@ -4,7 +4,8 @@
 # Uses Ruby Money for accuracy
 # Uses Fixer.io for exchange data
 
-require 'rest-client'
+require 'uri'
+require 'net/http'
 require 'json'
 require 'money'
 require 'monetize'
@@ -22,8 +23,8 @@ def conversion
 
   # Fetches API info
   begin
-    url = "http://api.fixer.io/latest?base=#{base_currency}&symbols=#{convert_to}"
-    response = RestClient.get(url)
+    uri = URI("http://api.fixer.io/latest?base=#{base_currency}&symbols=#{convert_to}")
+    response = Net::HTTP.get(uri)
     parsed = JSON.parse(response)
     convert_factor = (parsed['rates'][convert_to])
   rescue
