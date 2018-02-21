@@ -31,7 +31,7 @@ Uses the [APIXU](https://www.apixu.com/) weather api for data based on IP.
 
 Can also have a city passed as an argument to override the IP location.
 ```bash
-weather tokyo
+weather dallas
 ```
 
 ![Imgur](https://i.imgur.com/E6BX3nu.png)
