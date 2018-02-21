@@ -24,7 +24,7 @@ gem install jake-scripts
 ```
 
 ## Stock Search - Returns current stock information
-![Imgur](http://i.imgur.com/LpIFAdf.png)
+![Imgur](https://i.imgur.com/UkJKOSK.png)
 
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api for data based on IP.
@@ -34,19 +34,19 @@ Can also have a city passed as an argument to override the IP location.
 weather tokyo
 ```
 
-![Imgur](http://i.imgur.com/xzfwJF9.png)
+![Imgur](https://i.imgur.com/E6BX3nu.png)
 
 ## Movie Search - Uses OMDB API to return movie data
 Uses the [OMDB](http://www.omdbapi.com/) API.
 
-![Imgur](http://i.imgur.com/Gj4AjmZ.png)
+![Imgur](https://i.imgur.com/oECv5sR.png)
 
 ## Currency Exchange - Returns converted currency based on realtime exchange rates
 Uses [Fixer.io](http://fixer.io/) for exchange data.
 
 Uses [Ruby Money](https://github.com/RubyMoney/money) for conversion accuracy + currency symbols
 
-![Imgur](http://i.imgur.com/KSP7wOo.png)
+![Imgur](https://i.imgur.com/rUOzwJ3.png)
 
 ## Netgeo - IP network utility
 CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
