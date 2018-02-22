@@ -46,7 +46,7 @@ Uses [Fixer.io](http://fixer.io/) for exchange data.
 
 Uses [Ruby Money](https://github.com/RubyMoney/money) for conversion accuracy + currency symbols
 
-![Imgur](https://i.imgur.com/rUOzwJ3.png)
+![Imgur](https://i.imgur.com/yqhnPHi.png)
 
 ## Netgeo - IP network utility
 CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
