@@ -10,9 +10,8 @@
 [![Gem](https://img.shields.io/gem/dt/jake-scripts.svg)]()
 [![Language](https://img.shields.io/badge/language-Ruby-red.svg)]()
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-[![Platform](https://img.shields.io/badge/platform-MacOS%20%2B%20Linux-blue.svg)]()
 
-### Network Tools / Stock Finder / File Encryptor / Currency Converter / Weather / Movie Search
+### Stock Finder / Currency Converter / Weather / Movie Search
 
 </div>
 <br></br>
@@ -48,25 +47,6 @@ Uses [Ruby Money](https://github.com/RubyMoney/money) for conversion accuracy + 
 
 ![Imgur](https://i.imgur.com/yqhnPHi.png)
 
-## Netgeo - IP network utility
-CLI utility for returning LAN, WAN, Router, and DNS IP's, as well as Geodata on current or specific IP's. Outputs clean results to make all your piping dreams come true. | :+1: |
-
-Netgeo is separate gem available [here](https://rubygems.org/gems/netgeo)
-```ruby
-gem install netgeo
-```
-
-**NOTE:** If no IP is specified, your current public IP is used
-```bash
-=> netgeo -s ip,city,region 12.34.56.78
-
-=> 12.34.56.78
-   Huntington
-   WV
-```
-
-![Imgur](http://i.imgur.com/6welzqe.png)
-
 ## API Keys
 Users now have the option to set their own API keys through environment variables thanks to [sethkrasnianski](https://github.com/sethkrasnianski)
 ```bash
@@ -77,8 +57,6 @@ export APIXU_API_KEY=key
 ## Gems Used
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby gem for accurate currency management
 * [Monetize](https://github.com/RubyMoney/monetize) - Ruby gem for money object creation
-* [Slop](https://github.com/leejarvis/slop) - Ruby CLI option parsing framework
-* [OS](https://github.com/rdp/os) - Ruby gem for operating system identification
 
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
