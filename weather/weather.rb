@@ -43,7 +43,6 @@ def us_printer(parsed)
   feels_like = parsed["current"]["feelslike_f"]
   visibility = parsed["current"]["vis_miles"]
 
-  puts
   puts "======================"
   puts "City: #{location_name}"
   puts "Temp: #{temp}°F"
@@ -52,7 +51,6 @@ def us_printer(parsed)
   puts "Wind Speed: #{wind_speed} mph"
   puts "Visibility: #{visibility} mi"
   puts "======================"
-  puts
 end
 
 def intl_printer(parsed)
@@ -64,7 +62,6 @@ def intl_printer(parsed)
   feels_like = parsed["current"]["feelslike_c"]
   visibility = parsed["current"]["vis_km"]
 
-  puts
   puts "======================"
   puts "City: #{location_name}"
   puts "Temp: #{temp}°C"
@@ -73,7 +70,6 @@ def intl_printer(parsed)
   puts "Wind Speed: #{wind_speed} kph"
   puts "Visibility: #{visibility} km"
   puts "======================"
-  puts
 end
 
 weather

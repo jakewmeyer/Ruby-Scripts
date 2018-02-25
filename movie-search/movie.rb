@@ -50,7 +50,6 @@ def movie
     plot_unformatted = info['Plot']
     plot = wrap(plot_unformatted, 48)
 
-    puts
     puts '=================================================='
     puts "| Title: #{title}"
     puts "| Year: #{year}"
@@ -61,7 +60,6 @@ def movie
     puts "| Actors: #{actors}"
     puts "| Plot: #{plot}"
     puts '=================================================='
-    puts
   end
 end
 

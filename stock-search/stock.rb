@@ -38,7 +38,6 @@ def stock_search
       exchange = "NYSE"
   end
   
-  puts
   puts "=========================="
   puts "Symbol: #{quote['symbol']}"
   puts "Price: $#{quote['latestPrice']}"
@@ -61,7 +60,6 @@ def stock_search
   puts "Mkt Cap: $#{quote['marketCap']}"
   puts "Exchange: #{exchange}"
   puts "=========================="
-  puts
 end
 
 stock_search

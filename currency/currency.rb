@@ -49,14 +49,12 @@ def conversion
   final_convert = initial.exchange_to(convert_to)
 
   # Output formatting
-  puts
   puts '================='
   puts "#{base_currency} to #{convert_to}"
   puts "Rate: #{convert_factor}"
   puts "#{base_currency}: #{initial.format}"
   puts "#{convert_to}: #{final_convert.format}"
   puts '================='
-  puts
 end
 
 conversion
