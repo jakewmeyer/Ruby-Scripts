@@ -26,6 +26,8 @@ gem install jake-scripts
 ![Imgur](https://i.imgur.com/UkJKOSK.png)
 
 ## Cryptocurrency Search - Returns current cryptocurrency price information
+Uses the [CryptoCompare](https://min-api.cryptocompare.com/) API for current price information
+
 ![Imgur](https://i.imgur.com/hxdtiq0.png)
 
 ## Weather Search - Returns current weather information based on IP
