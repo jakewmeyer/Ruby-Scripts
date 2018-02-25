@@ -23,7 +23,7 @@ gem install jake-scripts
 ```
 
 ## Stock Search - Returns current stock information
-![Imgur](https://i.imgur.com/UkJKOSK.png)
+![Imgur](https://i.imgur.com/H6pwzmJ.png)
 
 ## Cryptocurrency Search - Returns current cryptocurrency price information
 Uses the [CryptoCompare](https://min-api.cryptocompare.com/) API for current price information
@@ -38,19 +38,19 @@ Can also have a city passed as an argument to override the IP location.
 weather dallas
 ```
 
-![Imgur](https://i.imgur.com/E6BX3nu.png)
+![Imgur](https://i.imgur.com/dv7yxLu.png)
 
 ## Movie Search - Uses OMDB API to return movie data
 Uses the [OMDB](http://www.omdbapi.com/) API.
 
-![Imgur](https://i.imgur.com/oECv5sR.png)
+![Imgur](https://i.imgur.com/IYFJBMH.png)
 
 ## Currency Exchange - Returns converted currency based on realtime exchange rates
 Uses [Fixer.io](http://fixer.io/) for exchange data.
 
 Uses [Ruby Money](https://github.com/RubyMoney/money) for conversion accuracy + currency symbols
 
-![Imgur](https://i.imgur.com/yqhnPHi.png)
+![Imgur](https://i.imgur.com/f0iwDBP.png)`
 
 ## API Keys
 Users now have the option to set their own API keys through environment variables thanks to [sethkrasnianski](https://github.com/sethkrasnianski)
