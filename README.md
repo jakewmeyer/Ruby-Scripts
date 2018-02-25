@@ -25,6 +25,9 @@ gem install jake-scripts
 ## Stock Search - Returns current stock information
 ![Imgur](https://i.imgur.com/UkJKOSK.png)
 
+## Cryptocurrency Search - Returns current cryptocurrency price information
+![Imgur](https://i.imgur.com/hxdtiq0.png)
+
 ## Weather Search - Returns current weather information based on IP
 Uses the [APIXU](https://www.apixu.com/) weather api for data based on IP.
 
