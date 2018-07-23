@@ -62,6 +62,7 @@ export APIXU_API_KEY=key
 ## Gems Used
 * [Ruby Money](https://github.com/RubyMoney/money) - Ruby gem for accurate currency management
 * [Monetize](https://github.com/RubyMoney/monetize) - Ruby gem for money object creation
+* [Colorize](https://github.com/fazibear/colorize) - Ruby gem for text and background CLI colors
 
 ## FAQ / Contact
 * If you run into any issues, please open an issue ASAP and we'll work to get it resolved and merged.
