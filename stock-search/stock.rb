@@ -34,10 +34,10 @@ def stock_search
   )
 
   quote = client.quote("#{parsed_symbol}")
-
+  puts quote
   # Shorten exchange string
   case quote['primary_exchange']
-    when "Nasdaq Global Select"
+    when "NASDAQ"
       exchange = "NASDAQ"
     when "New York Stock Exchange"
       exchange = "NYSE"
