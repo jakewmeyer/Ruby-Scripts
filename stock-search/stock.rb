@@ -32,9 +32,8 @@ def stock_search
   client = IEX::Api::Client.new(
   publishable_token: "#{token}",
   )
-
   quote = client.quote("#{parsed_symbol}")
-  puts quote
+  
   # Shorten exchange string
   case quote['primary_exchange']
     when "NASDAQ"
