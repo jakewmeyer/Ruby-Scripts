@@ -5,10 +5,18 @@ require 'json'
 require 'uri'
 require 'net/http'
 require 'colorize'
+require 'iex-ruby-client'
 
 def stock_search
-
   symbol = ARGV.join(" ")
+  token = ENV["IEX_API_TOKEN"]
+
+  if token.nil?
+    puts "Please export your IEX Cloud publishable API Token"
+    puts "See: https://iexcloud.io/docs/api/#authentication"
+    puts "export IEX_API_TOKEN='foo'"
+    exit(1)
+  end
 
   # Takes user input and generates ticker symbol.
   begin
@@ -21,18 +29,14 @@ def stock_search
     exit(1)
   end
 
-  # Use ticker symbol to fetch quote data
-  uri = URI("https://api.iextrading.com/1.0/stock/#{parsed_symbol}/quote")
-  response = Net::HTTP.get(uri)
-  if response == "Unknown symbol"
-    puts "Stock not found"
-    exit(1)
-  end
-  quote = JSON.parse(response)
-
+  client = IEX::Api::Client.new(
+  publishable_token: "#{token}",
+  )
+  quote = client.quote("#{parsed_symbol}")
+  
   # Shorten exchange string
-  case quote['primaryExchange']
-    when "Nasdaq Global Select"
+  case quote['primary_exchange']
+    when "NASDAQ"
       exchange = "NASDAQ"
     when "New York Stock Exchange"
       exchange = "NYSE"
@@ -40,7 +44,7 @@ def stock_search
   
   puts "=========================="
   puts "Symbol: #{quote['symbol']}"
-  puts "Price: $#{quote['latestPrice']}"
+  puts "Price: $#{quote['latest_price']}"
 
   # Color output for price change
   if quote['change'].positive?
@@ -50,14 +54,14 @@ def stock_search
   end
 
   # Color output for percent price change
-  if quote['changePercent'].positive?
-    puts "Chg %: " + "+#{quote['changePercent']}%".green
+  if quote['change_percent'].positive?
+    puts "Chg %: " + "+#{quote['change_percent']}%".green
   else
-    puts "Chg %: " + "#{quote['changePercent']}%".red
+    puts "Chg %: " + "#{quote['change_percent']}%".red
   end
 
-  puts "PE Ratio: #{quote['peRatio']}"
-  puts "Mkt Cap: $#{quote['marketCap']}"
+  puts "PE Ratio: #{quote['pe_ratio']}"
+  puts "Mkt Cap: $#{quote['market_cap']}"
   puts "Exchange: #{exchange}"
   puts "=========================="
 end
