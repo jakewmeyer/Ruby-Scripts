@@ -8,15 +8,15 @@ require 'colorize'
 require 'iex-ruby-client'
 
 def stock_search
-  
+  symbol = ARGV.join(" ")
   token = ENV["IEX_API_TOKEN"]
+
   if token.nil?
     puts "Please export your IEX Cloud publishable API Token"
     puts "See: https://iexcloud.io/docs/api/#authentication"
     puts "export IEX_API_TOKEN='foo'"
-    exit()
+    exit(1)
   end
-  symbol = ARGV.join(" ")
 
   # Takes user input and generates ticker symbol.
   begin
